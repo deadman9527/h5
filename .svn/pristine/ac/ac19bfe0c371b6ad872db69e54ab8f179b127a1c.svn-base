@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--允许全屏-->
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
+<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+<title>优品牌</title>
+
+<script src="http://h5.quxiu.me/min/?b=assets/3rd&f=zepto.min.js,underscore-min.js"></script>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #454545;
+}
+</style>
+</head>
+<body>
+<div id="J_GoodBrand"></div>
+
+
+<script type="text/template" id="tpl-slides">
+	<div id="J_Slider" class="slider" style="width:<%= w %>px;height:<%= h %>px;">
+		<div class="slider-outer">
+			<ul class="slider-wrap">
+				<% _.each(list, function (item) { %>
+				<li style="width:<%= w %>px;height:<%= h %>px;">
+					<a href="<%= item.link %>">
+						<img src="<%= item.img %>" width="<%= w %>" style="margin-top:<%= (h-ih*w/iw)/2 %>px"/>
+					</a>
+				</li>
+				<% }); %>
+			</ul>
+		</div>
+	</div>
+</script>
+
+<div class="next-arr-x-con"><div class="next-arr"></div></div>
+
+<script src="slider2.js" type="text/javascript"></script>
+<script type="text/javascript">
+	
+	var config = {
+		renderId: 'J_GoodBrand',
+		imgList: [{
+			img: 'http://img01.ve.cn/party/default/a29d77a03cbcd94e3c43bc0f676c7df7.jpg',
+			link: 'haimianbaobao.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/f532758314717e2801ad71ca5937e446.jpg',
+			link: 'huawang.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/a3f48c764ad37aeb7fcfc2c9cab94b16.jpg',
+			link: 'aitamei.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/8aaecf345390f01397c3882796399fb7.jpg',
+			link: 'beiqin.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/601e0e4f2a392fa195f97e334cd28f6f.jpg',
+			link: 'disini.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/a4c5ec3f1ab6aaa078416525e067c038.jpg',
+			link: 'enenxiong.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/eda4193533cebc98afd2cfffe4cd2f77.jpg',
+			link: 'shiba.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/60cdf9e30d8eb3534f92286ba6e7d321.jpg',
+			link: 'niulan.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/f0e4c4cd4c79aa8a9ab5aa69e171a8b3.jpg',
+			link: 'nanjiren.html'
+		},{
+			img: 'http://img01.ve.cn/party/default/ad3c4453b4aee673217c6884e0c5bf9a.jpg',
+			link: 'hellokitty.html'
+		}],
+		iWidth: 640,
+		iHeight:840
+	};
+		
+	var content = $('#' + config.renderId),
+		viewHeight = $(window).height(),
+		viewWidth = $(window).width();
+										
+	var createImgList = function(){
+		var listCon = [],
+			sliderTemp = _.template($('#tpl-slides').html()),
+			sliderCon = sliderTemp({
+				w: viewWidth,
+				h: viewHeight,
+				iw: config.iWidth,
+				ih: config.iHeight,
+				list: config.imgList
+			});
+					
+		sliderCon = $(sliderCon);
+		content.append(sliderCon);
+	};
+	
+	createImgList();
+	$('.next-arr-x-con').css('top', viewHeight/2 + 'px');
+	
+	new lib.Slider('#J_Slider',{
+		loop : true,
+		play : false,
+		direction: 'x',
+		special: true
+	});
+			
+</script>
+
+<!--<script src="http://h5.quxiu.me/min/?b=assets/ctrl&amp;f=ctrl-topbar/topbar.js,ctrl-bottombar/bottombar.js"></script>
+<script>
+    new ctrl.topBar({
+        isIndex: false
+    });
+    new ctrl.bottomBar({
+        isIndex: false
+    });
+</script>-->
+</body>
+</html>
+

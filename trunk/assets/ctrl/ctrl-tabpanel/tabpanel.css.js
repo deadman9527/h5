@@ -1,0 +1,1 @@
+define('mtb/ctrl-tabpanel/0.1.6/tabpanel.css',[],function(){$.importStyle('[data-ctrl-name=tabpanel]{font-size:inherit}')});

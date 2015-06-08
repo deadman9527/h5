@@ -1,0 +1,44 @@
+/*
+	CSS Function
+	purpose:使用这些方法方便以后兼容其他内核，都是需要前缀(webkit)的属性
+	ps:任何疑问或建议可旺旺—曹纯
+*/
+/* 箭头 android2.3 htc fixed上的bug，暂时用图片替代 */
+.c-p-con {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 280px;
+  display: -webkit-box;
+}
+.c-p-con .c-p-cur {
+  position: relative;
+  margin: 0 20px;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+}
+.c-p-con .c-p-cur .c-p-arrow {
+  text-align: center;
+}
+.c-p-con .c-p-cur .c-p-arrow .aw {
+  margin-left: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.c-p-con .c-p-cur .c-p-arrow .aw.a-u {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNzdEQkRGODA2RTAxMUUzOTlGODg2Qjk3NUJENUU1RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNzdEQkRGOTA2RTAxMUUzOTlGODg2Qjk3NUJENUU1RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM3N0RCREY2MDZFMDExRTM5OUY4ODZCOTc1QkQ1RTVEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM3N0RCREY3MDZFMDExRTM5OUY4ODZCOTc1QkQ1RTVEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GFwi7gAAAVFJREFUeNqs1M1KhUAUAOA0FyohucifnaveIEiyuw5foaCkXVC9QYsWraPWaT2AOyOIop9tL9GNAhVCUBS5KHZGNAZJnQsdOHiYOfPhMI5UVVUL/xmM4zhtvQX5CpnNsX4R0rAs66UdoJvnLqTHMMydpmlLc2DXkI+u6x7g4B7kFWooimIShuEzoBwhtoPqOI4vPc87RBOUbdtF0/AbPM+/CYIw8X0/78FuILfxQYqiClVV92mWZc+6K7IsW0uS5ElRFJYEQwHOl67ry3Se5yeiKF50G9I0XQf0AUN7MY7jpqZpnsOuPutDiaLouAfdAPRekiSOAPuoD7adaFD0POqgm7CLKZQrAxiav4Wc0XhD35uWZUmE4d/hKEqC/QmOoUNYL9iHdjG4trPuOnpoazhKgtU/h7ELi1BZlr8Nw4jHMCIQRRAEp4CtQvk+hKH4EWAAf6WsEeuLovMAAAAASUVORK5CYII=);
+}
+.c-p-con .c-p-cur .c-p-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  opacity: 0;
+  z-index: 10;
+}

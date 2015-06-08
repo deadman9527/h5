@@ -1,0 +1,24 @@
+{
+  "name": "lib.deliver",
+  "description": "param deliver (参数透传)",
+  "version": "1.0.0",
+  "author": "wanyan <wanyan.wz@taobao.com>",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-deliver",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-deliver.git"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-depconcat": "~0.2.0",
+    "grunt-depcombo": "~0.1.0"
+  },
+  "combo": {
+  },
+  "keywords": [
+    "deliver",
+    "lib"
+  ]
+}

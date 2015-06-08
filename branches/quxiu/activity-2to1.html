@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/activity-2to1.css?t=20141217" rel="stylesheet" type="text/css" />
+    <title>买二赠一</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+
+<div class="container">
+    <div class="main">
+        <!--头部-->
+        <img src="assets/img/banner.jpg" alt="" class="banner"/>
+        <div class="share">
+            <img src="assets/img/arrow-up.png" alt="" class="arrow-up"/>
+            <p>点此分享</p>
+        </div><!--活动规则--><a class="rules" href="activity-rules.html">
+            <img src="assets/img/snow1.png" alt="" width="10" height="10" class="snow1"/>
+            <img src="assets/img/snow2.png" alt="" width="20" height="7" class="snow2"/>
+            活动规则
+        </a>
+        <!--菜单-->
+        <ul class="menu-container">
+            <li>鞋服</li>
+            <li class="active">洗护</li>
+            <li>玩具</li>
+            <li>家具</li>
+            <li>辅食</li>
+            <li>孕妈</li>
+        </ul>
+        <div id="goods">
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-items">
+    <% _.each(data, function (item, index) { %>
+    <div class="list-item <%= index%2?'even':'odd' %>">
+        <a href="#" class="action">
+            <div class="item-main">
+                <div class="img lazy" dataimg="<%= Global.formatImgSrc(item.img.replace('http://api.local.ve.cn','http://img.ve.cn')) %>"></div>
+                <div class="profile">
+                    <div class="item-name"><%= item.name %></div>
+                    <div class="price">
+                        <div class="price-new">
+                            <span>活动价 ￥</span><%= parseFloat(item.current_price).toFixed(0) %>
+                            <del class="price-old"><%= parseFloat(item.origin_price).toFixed(0) %></del>
+                        </div>
+                        <div class="discount">省 <%= item.origin_price-item.current_price %></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <% }); %>
+</script>
+
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-infinitescroll/infinitescroll.js,lib/lib-notification/notification.js,ctrl/ctrl-topbar/topbar.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,lib/lib-snow/snow.js"></script>
+<script src="assets/h5/activity-2to1.js?t=20141217"></script>
+</body>
+</html>

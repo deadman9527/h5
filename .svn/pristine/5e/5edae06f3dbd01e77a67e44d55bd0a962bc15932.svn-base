@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--允许全屏-->
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
+<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+<title>优品牌</title>
+
+<script src="http://h5.ve.cn/min/?b=assets/3rd&f=zepto.min.js,underscore-min.js"></script>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+<link href="lists.css" rel="stylesheet" type="text/css" />
+<style>
+body{
+	margin: 0;
+	padding: 0;
+}
+</style>
+</head>
+<body>
+<div id="J_GoodBrand"></div>
+
+
+<script type="text/template" id="tpl-slides">
+	<div id="J_Slider" class="slider" style="width:<%= w %>px;height:<%= h %>px;">
+		<div class="slider-outer">
+			<ul class="slider-wrap">
+				<% _.each(list, function (item) { %>
+				<li style="width:<%= w %>px;height:<%= h %>px;<% if (item.bg) {%>background-color:<%= item.bg %><% } %>" >
+					<% if (item.link) {%>
+					<a href="<%= item.link %>">
+						<img src="<%= item.img %>" width="<%= w %>"/>
+					</a>
+					<% }else{ %>
+						<img src="<%= item.img %>" width="<%= w %>"/>
+					<% } %>
+
+					<% if (item.goodsList) {%>
+					<div class="grid">
+						<% _.each(item.goodsList, function (one,index) { %>
+						<a href="<%= one.link %>" class="action">
+							<div class="list-item <%= index%2 ? 'even' : 'odd' %>">
+								<% if (one.img) {%>
+									<img class="goods-img" src="<%= one.img %>" alt=""/>
+								<% } %>
+
+								<div class="profile">
+									<% if (one.title) {%>
+									<div class="item-name"><%= one.title %></div>
+									<% } %>
+
+									<div class="price">
+										<div class="price-new"><span>&yen;</span><%= Number(one.newPrice).toFixed(1) %><del class="price-old"><%= Number(one.oldPrice).toFixed(1) %></del></div>
+										<div class="discount"><%= Number(one.newPrice/one.oldPrice*10).toFixed(1) %>折</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<% }); %>
+					</div>
+					<% } %>
+				</li>
+				<% }); %>
+			</ul>
+		</div>
+	</div>
+</script>
+
+<div class="next-arr-x-con"><div class="next-arr"></div></div>
+
+<script src="slider.js" type="text/javascript"></script>
+<script type="text/javascript">
+	
+	var config = {
+		renderId: 'J_GoodBrand',
+		imgList: [{
+			img: 'http://img01.ve.cn/party/default/846de5ace554cf6bdeb739de2678d009.jpg',
+			bg: '#FFF',
+			goodsList: [{
+				img: 'http://img.ve.cn/public/attachment/201411/22/05/546f3d29a7c18.jpg',
+				link: 'http://www.ve.cn/goods-287.html',
+				title: '婴儿纸尿裤新生儿NB90片/包 原装进口 3倍透气 超强锁水',
+				oldPrice: '188',
+				newPrice: '129'
+			},
+			{
+				img: 'http://img.ve.cn/public/attachment/201411/22/05/546f3d29a7c18.jpg',
+				link: 'http://www.ve.cn/goods-465.html',
+				title: '婴儿纸尿裤 S82片/包 原装进口 3倍透气 超强锁水 尿量显示',
+				oldPrice: '188',
+				newPrice: '124'
+			}]
+		},{
+			img: 'http://img01.ve.cn/party/default/3ed7d3cde6162c217ef430a4de75cb36.jpg',
+			bg: '#FFF',
+			goodsList: [{
+				img: 'http://img.ve.cn/public/attachment/201410/09/16/54364218c5d09.jpg',
+				link: 'http://www.ve.cn/goods-400.html',
+				title: '拉拉裤 L44片/包 原装进口 透气防丝底层 持久干爽 活动自如',
+				oldPrice: '188',
+				newPrice: '125'
+			},
+			{
+				img: 'http://img.ve.cn/public/attachment/201410/09/16/5436424c201d4.jpg',
+				link: 'http://www.ve.cn/goods-328.html',
+				title: '拉拉裤 XL38片/包 原装进口 透气防丝底层 持久干爽 活动自如',
+				oldPrice: '188',
+				newPrice: '125'
+			}]
+		},{
+			img: 'http://img01.ve.cn/party/default/198451721f1606fc5b04344f7497c555.jpg',
+			bg: '#FFF',
+			goodsList: [{
+				img: 'http://img.ve.cn/public/attachment/201411/06/23/545b1ee2aa5a5.jpg',
+				link: 'http://www.ve.cn/goods-20292.html',
+				title: '婴儿纸尿裤新生儿(NB)90片',
+				oldPrice: '376',
+				newPrice: '256'
+			},
+			{
+				img: 'http://img.ve.cn/public/attachment/201411/06/23/545b1eaf06c7a.jpg',
+				link: 'http://www.ve.cn/goods-19796.html',
+				title: '婴儿纸尿裤 小号S82片（2包组合）',
+				oldPrice: '188',
+				newPrice: '124'
+			},
+			{
+				img: 'http://img.ve.cn/public/attachment/201411/06/23/545b1f0f20d7d.jpg',
+				link: 'http://www.ve.cn/goods-20275.html',
+				title: '日本花王 拉拉裤L44片（2包组合）',
+				oldPrice: '188',
+				newPrice: '129'
+			},
+			{
+				img: 'http://img.ve.cn/public/attachment/201412/14/00/548bf52aeb45d.jpg',
+				link: 'http://www.ve.cn/goods-20331.html',
+				title: '日本花王 拉拉裤XL38片（2包组合）',
+				oldPrice: '188',
+				newPrice: '124'
+			}]
+		},{
+			img: 'http://img01.ve.cn/party/default/8fed22a941792f6875c4d37cde522a27.png',
+			link: 'http://h5.ve.cn/detail.html?productId=9831',
+			bg: '#ecfbff'
+		},{
+			img: 'http://img01.ve.cn/party/default/7877ea4ef66f64966388fb34aad1aaea.jpg',
+			bg: '#FF3861'
+		}]
+	};
+		
+	var content = $('#' + config.renderId),
+		viewHeight = $(window).height(),
+		viewWidth = $(window).width();		
+									
+	var createImgList = function(){
+		var listCon = [],
+			sliderTemp = _.template($('#tpl-slides').html()),
+			sliderCon = sliderTemp({
+				w: viewWidth,
+				h: viewHeight,
+				list: config.imgList
+			});
+					
+		sliderCon = $(sliderCon);
+		content.append(sliderCon);
+	};
+	
+	createImgList();
+	$('.next-arr-x-con').css('top', viewHeight/2 + 'px');
+	
+	new lib.Slider('#J_Slider',{
+		loop : true,
+		play : false,
+		direction: 'x',
+		special: true
+	});
+			
+</script>
+
+<!--<script src="http://h5.ve.cn/min/?b=assets/ctrl&amp;f=ctrl-topbar/topbar.js,ctrl-bottombar/bottombar.js"></script>
+<script>
+    new ctrl.topBar({
+        isIndex: false
+    });
+    new ctrl.bottomBar({
+        isIndex: false
+    });
+</script>-->
+</body>
+</html>
+

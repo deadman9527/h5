@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/pay.css?t=20150130" rel="stylesheet" type="text/css" />
+    <title>支付失败</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+<div class="container" style="display: none">
+    <div class="fail-top">
+        <img src="http://img01.ve.cn/party/792810450f21afaab0dde1f617308b18.png" alt=""/>
+    </div>
+    <p class="failed">支付失败，请抓紧时间重新支付哦！</p>
+    <div class="btn-container">
+        <a class="btn btn-active" href="order-list.html#status=1">重新支付</a>
+        <a class="btn btn-default" href="index.html">去逛逛</a>
+    </div>
+</div>
+<script src="http://h5.ve.cn/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.ve.cn/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-httpurl/httpurl.js,ctrl/ctrl-topbar/topbar.js,lib/lib-env/env.js,lib/lib-callapp/callapp.js,ctrl/ctrl-bottombar/bottombar.js"></script>
+<script>
+    var title = "支付失败";
+
+    new ctrl.topBar({
+        isIndex: false,
+        title: title
+    });
+
+    new ctrl.bottomBar({
+        showBottom:true,
+        showApp:false,
+        showCircle:false
+    });
+
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MobileVecn/i)){
+        document.title = "支付失败";
+        //$('.container').html('');
+        $('.container').html('<div class="fail-top"><p class="failed">支付宝支付失败！</p></div>').show();
+    }else{
+        $('.container').show();
+    }
+</script>
+</body>
+</html>

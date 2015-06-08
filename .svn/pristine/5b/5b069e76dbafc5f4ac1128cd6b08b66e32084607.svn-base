@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-cn" tn-launch-app="triton.xiumi.reader.board" data-useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    
+<title>崔玉涛教授谈宝宝遇到湿疹怎么办？</title>
+
+
+<meta charset="UTF-8">
+
+<base target="_top">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="x-rim-auto-match" content="none">
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+
+    <meta name="author" content="xiumi.us 传扬信息科技">
+    <meta name="keywords" content="秀米 XIUMI 单品秀 传扬信息科技 微信 公众号 图文消息 排版 助手">
+
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="http://stc.xiumi.us/apps/board/styles/679a72.board.min.css">
+
+    
+</head>
+<body class="full-height-box board-body">
+
+<div class="inner ng-scope" ng-controller="BoardDeskController" style="padding:0 15px;s">
+    <section class="tn-article-section container">
+
+        <section class="row tn-board-head">
+            
+            <h3>崔玉涛教授谈宝宝遇到湿疹怎么办？</h3>
+            
+            <div class="tn-head-info">
+                <span class="time ng-binding" ng-bind="showInfo.updated_at | date:'yyyy-M-d'">2014-11-27</span>
+                <span class="hor-sep"></span>
+                <span class="brand ng-binding" ng-bind="showInfo.owner.brand_name"></span>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="row tn-board-body tn-article-content-context">
+            <!-- ngIf: !showData -->
+
+            <!-- ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f39a4dac2c.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f39a4dac2c.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">1</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">宝宝有湿疹还能吃母乳吗?</strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">湿疹是异常皮肤现象，但不一定仅是皮肤问题。对婴幼儿，过敏是引起湿疹的常见原因。牛奶过敏是婴幼儿过敏的首要原因，这与生后过早或多或少地接受过婴儿配 方粉有关。新生儿出生后，只要其体重下降没有超过出生体重的7%就完全应坚持纯母乳喂养，不应过早添加配方粉。"坚持"太重要了!<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f3a404c660.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f3a404c660.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">2</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">家有湿疹宝宝妈妈怎么吃?</strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">婴儿严重湿疹，若怀疑与母乳有关，应限制妈妈进食种类。妈妈只吃主食+青菜，同时给婴儿激素+抗生素药膏治疗严重湿疹。待湿疹好转后，妈妈开始一种一种地恢复食物，每种食物添加后观察三天，若湿疹无复发，说明这种食物妈妈可食入，否则停止食入至少3个月。妈妈限制自身饮食后，无任何效果，才可考虑暂停母乳，添加氨基酸配方进行诊断性治 疗。2-4周后，情况明显见好，再次换为母乳喂养，情况又明显加重，才可考虑停止母乳喂养，换成氨基酸\深度水解配方。这种情况少见。<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f421d6e712.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f421d6e712.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">3</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">有湿疹还能吃配方奶吗?<br></strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">出生头两个月服用配方奶，没有湿疹等问题;一段时间后再次服用，出现头面部红肿和大片湿疹。整个过程是典型的IgE介导的过敏过程。初期的致敏(体内出现 IgE增高，但还没有症状);几个月后再次接触时出现有症状的过敏。此时，若必须添加配方粉，只能添加氨基酸配方或深度水解配方。<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/06/546f47db70b30.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/06/546f47db70b30.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">4</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">湿疹宝宝能吃全蛋吗?</strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">一岁内的婴儿不建议吃全蛋。对于仅9个月婴儿来说，只能接受米粉、米粥或面条，再可接受菜泥、肉泥、蛋黄泥等。如果任何一种辅食添加后，出现皮肤湿疹加重、呕吐、腹泻等，应暂停此种食物的添加至少3个月。对于食物的理解：一种食物对某人来说是营养，对另外一个人来说有可能是毒素。<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f42cbbf80d.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f42cbbf80d.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">5</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">湿疹宝宝可以打疫苗吗?<br></strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">儿童湿疹反复发作，首先应寻找原因，是否与食物过敏有关?排除原因，才能根本解除湿疹。再有，使用外用药控制湿疹的皮肤变化。其实，只要有完整皮肤，且对 疫苗不过敏，湿疹儿童可进行预防接种。注意：牛奶过敏者，不服OPV，改为IPV;鸡蛋过敏者，慎重接种流感疫苗和部分狂犬病疫苗。<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f3d628de7f.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f3d628de7f.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">6</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">严重湿疹怎么治疗？<br></strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">严重湿疹的治疗原则：<br>　　1、从生活中寻找过敏原，及时戒断。常见过敏原为牛奶、鸡蛋、大豆、带壳的海鲜等。若怀疑牛奶过敏，对婴儿来说，采用氨基酸配方进行 诊断性治疗2-4周，确定过敏原因。<br>　　2、局部激素+抗生素治疗。严重湿疹往往有局部继发感染，例如：氢化可的松+红霉素局部应用。<br><br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/06/546f46654c51a.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/06/546f46654c51a.png" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope"><section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable"><section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">7</section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">湿疹流脓了怎么护理?</strong></span></section></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">对脱屑、裂口、渗出的湿疹，只能用激素+抗生素药膏外用治疗。当皮肤损伤基本愈合后，才可用其它湿疹膏。不要惧怕外用激素。使用激素后局部皮肤出现色素沉着，那是对激素的误解。越是不积极用外用激素，湿疹越重，持续时间越长，局部就越会出现色素沉着。应根据不同部位皮损程度，考虑使用不同药物种类、剂量及用药频度。对于颜面部，特别是口周部湿疹，应在孩子熟睡后涂抹药物，以减少吃进口内的机会。很多顽固湿疹对激素不敏感，是因皮损已并发细菌等感染。所以，建议将皮质激素与抗生素混合应用，其效果甚佳。但是引起湿疹的原因毕竟不能通过外用激素来解决，所以还要寻找引发湿疹的原因，如牛奶过敏等。及时去除原因，才可根治湿疹，避免复发。<br></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices --><div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+                <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts"><!-- ngInclude: (page.templateId) | templateIdToPath: templatePath --><div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath"><fieldset style="border:0;box-sizing: border-box; width: 100%; clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 100%;
+              height: auto !important;
+              text-align: start" src="http://img.ve.cn/public/attachment/201411/22/05/546f3db718e72.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://img.ve.cn/public/attachment/201411/22/05/546f3db718e72.jpg" class="ng-scope tn-page-editable"></fieldset></div></div>
+            </div><!-- end ngRepeat: slice in slices -->
+        </section>
+
+
+    </section>
+</div>
+
+<section class="tn-scripts">
+    <!-- 3rd -->
+    <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.18/angular.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.18/angular-animate.min.js"></script>
+    <script src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+    <script src="http://stc.xiumi.us/templates/parts/1706ed.ng-tpl.js"></script>
+
+    <script src="http://stc.xiumi.us/apps/board/scripts/db914f.board.min.js"></script>
+
+    <script>
+        _MountWXShare();
+    </script>
+</section>
+
+
+<script src="http://h5.ve.cn/assets/js/piwik.min.js"></script> 
+
+</body></html>

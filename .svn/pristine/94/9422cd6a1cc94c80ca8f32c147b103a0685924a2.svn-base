@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/discover.css?t=20141215" rel="stylesheet" type="text/css" />
+    <title>发现</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+<div class="container">
+    <div class="main">
+        <ul id="item"></ul>
+    </div>
+</div>
+</script><script type="text/template" id="tpl-item">
+    <% _.each(itemList, function (item,index) { %>
+    <a href="<%=item.targetUrl%>"><li><span class="float-left"><img width="20" src="<%= item.icon%>" /><%= item.title%></span><span class="float-right"><%= item.desc%></span></li></a>
+    <%});%>
+</script>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=3rd/underscore-min.js,lib/lib-h5log/h5log.js,lib/lib-httpurl/httpurl.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js"></script>
+<script src="assets/h5/discover.js?t=20141215"></script>
+</body>
+</html>

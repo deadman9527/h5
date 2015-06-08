@@ -1,0 +1,25 @@
+{
+  "name": "lib.pagenav",
+  "description": "pagenav",
+  "version": "0.1.0",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-pagenav",
+  "author": "wuzhong <wuzhong@taobao.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-pagenav.git"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-depconcat": "~0.2.0",
+    "grunt-depcombo": "~0.1.0",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "combo": {},
+  "keywords": [
+    "pagenav",
+    "lib"
+  ]
+}

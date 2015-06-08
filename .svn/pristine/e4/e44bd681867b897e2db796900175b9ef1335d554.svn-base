@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/list.css?t=20150303" rel="stylesheet" type="text/css" />
+    <title></title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+
+<div class="container">
+    <div class="main">
+        <div class="main-hd">
+            <div class="nav">
+                <a href="javascript:void(0)" class="j-sort active">综合排序</a> <i class="split"></i>
+                <a href="javascript:void(0)" class="j-sort down-up" data-type="price"><i class="icon icon-arrow"></i>价格</a> <i class="split"></i>
+                <a href="javascript:void(0)" class="j-sort" data-type="mount"><i class="icon icon-arrow"></i>销量</a> <i class="split"></i>
+                <a href="javascript:void(0)" class="j-filter" data-type="ishave"><i class="icon icon-radio"></i>有货</a>
+            </div>
+        </div>
+        <div class="main-bd">
+            <div id="promotion"></div>
+            <div id="items" class="item-list clearfix"></div>
+            <div class="info-tip">数据加载中...</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-promotion">
+    <% if(data.fullGifts || data.fullReduce || data.surplus){%>
+    <div class="pro-tip">
+        <% if(data.fullGifts && data.fullReduce){%>
+        <div class="promotion">
+            <span class="tip tip-green"><%= data.fullReduce.name %></span><span class="tip tip-red"><%= data.fullGifts.name %></span>
+        </div>
+        <% } %>
+        <% if(!(data.fullGifts && data.fullReduce) && (data.fullGifts || data.fullReduce)){%>
+        <div class="promotion">
+            <% if(data.fullReduce) {%>
+            <span class="tip tip-green"><%= data.fullReduce.name %></span>
+            <% }else if(data.fullGifts){ %>
+            <span class="tip tip-red"><%= data.fullGifts.name %></span>
+            <% } %>
+            <span class="promotion-value"><% if(data.fullReduce) {%><%= data.fullReduce.value %><% }else{ %><%= data.fullGifts.value %><% } %></span>
+        </div>
+        <% } %>
+        <% if(!(data.fullGifts || data.fullReduce)){%>
+        <div class="time-end time-fr"><% if(data.surplus) {%><%= data.surplus %><% } %></div>
+        <%}else{%>
+        <div class="time-end"><% if(data.surplus) {%><%= data.surplus %><% } %></div>
+        <% } %>
+    </div>
+    <% } %>
+</script>
+
+<script type="text/template" id="tpl-item">
+    <% _.each(itemList, function (item, index) { %>
+    <div class="list-item <%= (sum+index)%2 ? 'even' : 'odd' %>">
+        <a class="action" data-id="<%= item.productid %>" href="<%= Global.formatTitleLink(item.productid, brandId, item.alias) %>">
+        <!--<a class="action" data-id="<%= item.productid %>" href="detail.html?productId=<%= item.productid %>&brandId=<% if (brandId) {%><%= brandId %><%}%>">-->
+            <div class="item-main">
+                <div class="lazy img <%= !Number(item.is_stock) ? 'sold-out' : '' %>" dataimg="<%= Global.formatImgSrc(item.img) %>"></div>
+                <div class="profile">
+                    <div class="item-name"><%= item.name %></div>
+                    <div class="price">
+                        <div class="price-new">
+                            <% if(item.is_phone_price=='1') {%>
+                                <% if(Number(Number(item.phone_price).toFixed(0)).toFixed(1)==Number(item.phone_price).toFixed(1)) {%>
+                                ￥<%= Number(item.phone_price).toFixed(0) %>
+                                <% }else{ %>
+                                ￥<%= Number(item.phone_price).toFixed(1) %>
+                                <% } %>
+                            <%}else{%>
+                                <% if(Number(Number(item.current_price).toFixed(0)).toFixed(1)==Number(item.current_price).toFixed(1)) {%>
+                                ￥<%= Number(item.current_price).toFixed(0) %>
+                                <% }else{ %>
+                                ￥<%= Number(item.current_price).toFixed(1) %>
+                                <% } %>
+                            <%}%>
+                            <del class="price-old">
+                                <% if(Number(Number(item.origin_price).toFixed(0)).toFixed(1)==Number(item.origin_price).toFixed(1)) {%>
+                                ￥<%= Number(item.origin_price).toFixed(0) %>
+                                <% }else{ %>
+                                ￥<%= Number(item.origin_price).toFixed(1) %>
+                                <% } %>
+                            </del>
+                        </div>
+                        <div class="discount">
+                            <% if(item.is_phone_price=='1') {%>
+                                <% if(Number(Number(item.phone_price/item.origin_price*10).toFixed(0)).toFixed(1)==Number(item.phone_price/item.origin_price*10).toFixed(1)) {%>
+                                <%= Number(item.phone_price/item.origin_price*10).toFixed(0) %>
+                                <% }else{ %>
+                                <%= Number(item.phone_price/item.origin_price*10).toFixed(1) %>
+                                <% } %>
+                            <%}else{%>
+                                <% if(Number(Number(item.current_price/item.origin_price*10).toFixed(0)).toFixed(1)==Number(item.current_price/item.origin_price*10).toFixed(1)) {%>
+                                <%= Number(item.current_price/item.origin_price*10).toFixed(0) %>
+                                <% }else{ %>
+                                <%= Number(item.current_price/item.origin_price*10).toFixed(1) %>
+                                <% } %>
+                            <%}%>折
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <% }); %>
+</script>
+
+<script src="http://h5.ve.cn/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.ve.cn/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-lazyload/lazyload.js,lib/lib-infinitescroll/infinitescroll.js,lib/lib-httpurl/httpurl.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,lib/lib-env/env.js,lib/lib-callapp/callapp.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js,lib/lib-countdown/countdown.js&2015"></script>
+<script src="assets/h5/list.js?t=20150227"></script>
+
+</body>
+</html>

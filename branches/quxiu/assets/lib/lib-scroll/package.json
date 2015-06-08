@@ -1,0 +1,44 @@
+{
+  "name": "lib.scroll",
+  "description": "用Transform来模拟原生的滚动，并提供丰富的API和插件",
+  "version": "2.4.4",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-scroll",
+  "author": [
+    "渚薰"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-scroll.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cmdwrap": "^0.1.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-depcombo": "~0.2.3",
+    "grunt-depconcat": "~0.2.1"
+  },
+  "dependencies": {},
+  "combo": {
+    "lib.motion": "1.0.5",
+    "lib.gesture": "1.1.10",
+    "lib.cubicbezier": "1.0.0",
+    "lib.animation": "2.0.3"
+  },
+  "keywords": [
+    "lib",
+    "scroll",
+    "滚动"
+  ]
+}

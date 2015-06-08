@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/detail.css?t=20150228" rel="stylesheet" type="text/css" />
+    <link href="assets/lib/lib-swiper/swiper.css?t=20150228" rel="stylesheet" type="text/css" />
+    <title>商品详情</title>
+    <style>
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin:3.125% auto 0 auto;
+        background: #fff;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 60%;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide:nth-child(2n) {
+        width: 40%;
+    }
+    .swiper-slide:nth-child(3n) {
+        width: 20%;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <!--轮播banner-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="slides">
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div id="items"></div>
+		<div class="brands" id="brands">
+			
+		</div>
+
+        <!--detail-->
+        <div class="middle">
+            <div class="middle-top">
+                <ul>
+                    <li>
+                        <span class="hover" po="1">图文详情</span>
+                    </li>
+                    <li>
+                       <span class="" po="2">看了又看</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pro-detail">
+
+                
+
+            </div>
+
+
+            <div class="pro-love">
+                <div id="love-items" class="item-list clearfix">
+
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!--bottom-->
+        <div class="pro-bottom">
+            <ul>
+                <li class="pro-cert">
+                    <a href="cart.html"><div class="pro-certlist"></div></a>
+                </li>
+                <li id="buy" class="pro-buy-red sku-trigger"  data-interaction="detail|buy|1|0">
+                    立即购买
+                </li>
+                <li id="buy-now" class="pro-buy sku-trigger"  data-interaction="detail|cart|1|0">
+                    加入购物车
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--SKU dialog-->
+<div id="sku-dialog" class="dialog-box-outer">
+    <div class="sku-dialog-box">
+        <div class="pro-sku" id="pro-sku">
+            <div class="pro-sku-top">
+                <ul id="dia-sku-top">
+                    <li class="float-right pro-cancle">
+                        <img class="sku-cancel" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjAyMEJBRURENzIwQzExRTRBREVGQjY5MjkzOEU1QzdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjAyMEJBRURFNzIwQzExRTRBREVGQjY5MjkzOEU1QzdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDIwQkFFREI3MjBDMTFFNEFERUZCNjkyOTM4RTVDN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDIwQkFFREM3MjBDMTFFNEFERUZCNjkyOTM4RTVDN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5pWN6tAAABBklEQVR42sTTzQ3CMAwF4PDENnSfTlMOwBIdoczT7kMsFSmEtPlxbFt6PbxcPqn2ZZ7nxTn38Nmc7dx8JvjP0+e9F5YYMrwItPqMhqgvhgwr9tIK9YOhAsGjNuoPE4M0UUMKkwJpoAizpDBHIEnUKeYMJIHKYnKgnqgiTAmoB6oYUwrioKowNaAWVDWmFlSDasK0gGLU0BPTCgpRS4RiYWiujFMOUePesTBcUIxyXAznl4kNFxTuTGqnVEHxAq89UOiEyV2fKCh32iwUOmPYKAhgWCgIYZpREMQ0oSCMqUZBAVOFghKmGAVFTBEKypgsCgaYUxSMMIcoGGKSKAJNhpgYdf8IMABOUYgZIYoSlgAAAABJRU5ErkJggg==" />
+                    </li>
+                </ul>
+            </div>
+            <div class="pro-sku-body">
+                <div class="sku-size" id="dia-sku-size">
+                </div>
+                <!--<h1>颜色：</h1>
+                <div class="sku-color">
+                    <span>L</span><span>M</span><span>S</span>
+                </div>-->
+                <div class="sku-count">
+                    <span class="float-left">数量：</span>
+                    <span class="float-right"><div id="J_Num1" class="num"></div></span>
+                </div>
+                <input id="sku-size" type="hidden" val="" />
+                <input id="sku-color" type="hidden" />
+            </div>
+            <div class="pro-sku-foot">
+                <span>确定</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--评价图片dialog-->
+<div id="dialog" class="dialog-box-outer sku-dia">
+    <div class="dialog-box">
+        <!--<div class="hd">title<span class="j-cancel">XXXX</span></div>-->
+        <div class="bd" id="sliderDiv">
+
+            <div class="slider-box2">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-slides">
+    <% _.each(itemList, function (item) { %>
+    <div class="swiper-slide">
+        <a href="javascript:;"><img class="lazy" dataimg="<%= item.url %>" src="http://h5.quxiu.me/assets/img/empty.png" /></a>
+    </div>
+    <% }); %>
+</script>
+
+<script type="text/template" id="tpl-item">
+<% _.each(itemList, function (item, index) {
+	var pic = null;
+	if(item.dealCate=="woman"){
+		pic = "http://img01.ve.cn/party/95e452e002576dfad80585c2464e61a5.jpg";
+	}else if(item.dealCate=="man"){
+		pic = "http://img01.ve.cn/party/536eab11bbc55f4336079b80f66c3114.jpg";
+	}
+%>
+    <% _.each([item.products], function (item, index) { %>
+    <!--标题-->
+    <div class="pro-title">
+        <h1><%= item.name %></h1>
+        <h2 id="pro-h1">
+            <!--<span class="phone-price"><span class="freetwo">买二送一</span></span>-->
+            <% if(item.suxing){ %>
+                <% var isPhone=false; _.each(item.suxing[0].xxsx, function (item_sx, index) { %>
+                    <% if(!isPhone){ %>
+                        <span class="price-big"><span class="price-icon">￥</span><%=  item_sx.is_phone_price=="1" ? parseFloat(item_sx.phone_price) : parseFloat(item_sx.current_price) %></span>
+                        <span class="price-origin">原价:￥<%= parseFloat(item.origin_price) %></span>
+                        <span class="label price-discount"><%= item_sx.is_phone_price=="1" ? Number(item_sx.phone_price/item.origin_price*10).toFixed(1):Number(item_sx.current_price/item.origin_price*10).toFixed(1) %>折</span>
+
+                        <% if(item_sx.is_phone_price=="1" && item_sx.current_price > item_sx.phone_price){%><span class="label phone-price">手机专享价</span><% }%>
+                    <% isPhone=true;} %>
+                <% });%>
+            <% }else{ %>
+                <span class="price-big"><span class="price-icon">￥</span><%=  item.is_phone_price=="1" ? parseFloat(item.phone_price) : parseFloat(item.current_price) %></span>
+            <span class="price-origin">原价:￥<%= parseFloat(item.origin_price) %></span>
+            <span class="label price-discount"><%= item.is_phone_price=="1" ? Number(item.phone_price/item.origin_price*10).toFixed(1):Number(item.current_price/item.origin_price*10).toFixed(1) %>折</span>
+
+                <% if(item.is_phone_price=="1"  && item.current_price > item.phone_price){%><span class="label phone-price">手机专享价</span><%} %>
+            <% }%>
+
+            <!--<span class="price-big">￥<% if(item.is_phone_price=="0"){%><%=  item.current_price %><%}else{%><%=item.phone_price%><%} %></span>
+            <span class="price-small">￥<%= item.origin_price %></span>
+            <span class="payoff"><% if(item.is_phone_price=="0"){%><%= Number(item.current_price/item.origin_price*10).toFixed(1) %><%}else{%><%= Number(item.phone_price/item.origin_price*10).toFixed(1) %><%} %>折</span>-->
+        </h2>
+    </div>
+    <% if(item.is_sea_tips){%>
+    <div class="sea_pro" style="display: none;">
+        <p><%= item.is_sea_tips%></p>
+    </div>
+    <% }%>
+    <div class="payoffall">
+        <ul>
+            <li id="by"></li>
+            <li id="mj"></li>
+            <li id="mz"></li>
+            <li id="gift"></li>
+        </ul>
+    </div>
+
+
+    <!--<div class="payoffall">
+        <ul>
+            <li id="mj"></li>
+            <li id="by"></li>
+            <li id="mz"></li>
+        </ul>
+    </div>-->
+    <!--推荐-->
+    <div class="recom">
+        <a class="recom-item" href="javascript:;">
+            <div class="item-main">
+                <div class="item-hd">
+                    <div class="logo" dataimg="">
+						<%
+						if(pic){
+						%>
+						<img class="lazy" dataimg="<%= pic %>" src="http://h5.quxiu.me/assets/img/empty.png" width="50" />
+						<%
+						}else{
+                        if(item.id%3==0){
+                        %>
+                        <img class="lazy" dataimg="http://img.ve.cn/public/attachment/201412/12/18/548a57065bbef.jpg" src="http://h5.quxiu.me/assets/img/empty.png" width="50" />
+                        <%
+                        }else if(item.id%3==1){
+                        %>
+                        <img class="lazy" dataimg="http://img.ve.cn/public/attachment/201412/12/18/548a59329947f.jpg" src="http://h5.quxiu.me/assets/img/empty.png" width="50" />
+                        <%
+                        }else if(item.id%3==2){
+                        %>
+                        <img class="lazy" dataimg="http://img.ve.cn/public/attachment/201412/12/18/548a59448452b.jpg" src="http://h5.quxiu.me/assets/img/empty.png" width="50" />
+                        <%
+                        }}
+                        %>
+                    </div>
+                    <div class="others">
+                        <div class="name">趣秀点评</div>
+                        <div class="recom-content" id="recom-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="pro-call">
+        <span class="tel-phone">客服电话：400-616-1111 </span><a href="tel:4006161111"><span class="callright">立即拨打</span></a>
+    </div>
+
+    <!--middleline
+    <div class="middleline">
+        <p><img width="21" height="17" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0QUJBMEZFNzFFODExRTRBREVGQjY5MjkzOEU1QzdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0QUJBMEZGNzFFODExRTRBREVGQjY5MjkzOEU1QzdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDRBQkEwRkM3MUU4MTFFNEFERUZCNjkyOTM4RTVDN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDRBQkEwRkQ3MUU4MTFFNEFERUZCNjkyOTM4RTVDN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7g7kW/AAAC0klEQVR42uyYTUhVQRTHffrEryCxyEKKMt0YfZFRKhEE0gfiIouKIqhNVKsCF7oqaNGijZuKSKLAVlFSEUofi7cICok0QXgt0so+KK2nQvoMb/+hc2GYZs7MfR/yDA/84N2Zc8783507M+fekOd5WXPBsrPmiIWTiH0EakFc05cL+sD2TBBaDhYy/aszZepHk+z/P5/ReaGpfkbDaRL5HEQyWeglcBP0S205dHeXg2IwCT6CIfBzNoROS7/vghYQpetCsB/sBZtAmSZ+ArwBnUSUHU0coQ4sBRtADSiktmHvr7VIfmV0HfOC23Ww3qTBJvAkeAXiUsK11PcaHJR8j4NpL3lrDyJ0BxgwJPL/9QrJ/6KXWusGYZvQI5Yk1Yr/CYeBp0AveAJegO8OMU85oa0OCWok/20W32ugCSxTxikCu8B5S3yrTmg5EzADOkAzKCH/HDDKxBx2XKjrwHsmT5UqNGJwfAAqNAMcY5LvcRTpsxhMGnI9k4VuNTjdY5LfNsQ8DihS3mE+gw90hwWfQI8stF0z4Li68hReGoTuTFCoIBdkS4jx80WffzKt0ZwFd8Bv5qwoMbT3pei0Ezbja/CrJ12l/taSNG5oz09nmRfT9FVYYocN7Y3pfLkT07VF6dsHTlG1E0SoiGlLQEs9PYJx5SVxDNzwH+LdhoVxmXnwG5nt6WzARVTL5OpS99Eeg+NVOgx0A3QzA9wCpQ4iudPpBygWfiHpS8lK8M4wLWL1dYBempouWmx54Cvz2hyjQrqTas8pKqRXgQZw1LIW6uht4Z+zvs2xuhkBBRRT7xjzC4yBCUf/K7bq6YJjoght0CLmEBhKYZl3zrUeFXcp6pDwC6ikmAXgfpIC+0FdIhX+aarkTSam8YAS00A1ZxAbBGc4LSHHz46VYCNYRNfjtPdyx+Vm0ASqwRJQRAvJo735GxgADwlWiKvQ+U86rvZHgAEAQgL90AHVPkQAAAAASUVORK5CYII=" />
+            <span>中华财险为趣秀品质承保，假一赔50万</span>
+            </p>
+    </div>
+    评价-->
+
+    <div class="evaluation">
+        <h1><span>&nbsp;</span>商品口碑</h1>
+        <div class="evaluation-item">
+            <% if(item.comment_lists){ %>
+            <a class="eva-item" href="javascript:;">
+                <div class="item-main">
+                    <% var commlength = item.comment_lists.length; _.each(item.comment_lists, function (item,index) { %>
+                    <div class="item-hd" style="<%= (index==commlength-1)?'border-bottom:0;' : ''%>">
+                        <div class="<%= (item.is_best=='1') ? 'logo' : 'logo2'  %>">
+                            <div class="avator" style="background-image: url('<%= item.pic||'data:image/png;base64,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/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAATwUlEQVR42pyaXWgca5rff0+91dWttiQfqY/Ur4+tsqq32zeNFeKZZDKDNwzRKMT4Yi4yHHKxJLCE3WWWXZKLBHJ1GAgbyEKWTWZzkYVNIISFw15kAkbLarVkGO8muwETJBqCu0+XT8keV9tq6citr66ut95cVOvTsjKZAhupvv71/J//8/W+kv/D1Ued0Hfb1EM/MouutO+RSTeQ0ZYf3oMvqNkONGxYs2FAaLjucD90odOoWQATUZd2XT1vYI1BFgqMUAEpDYsNTVuZTsPUVPvnAcG4tBdfyL1MuqYeEqSu8UeHog71gbFqMqoZ1cVQl25gUPY6S+RDdCnDokcmo4I1Lu3F0bFMJPHJVe0dff8/RahamzqhaXTNzwVS7zTatS8JOvWwZtz7f25jtMdqfvERJLE2pRLSbtANOtfT9WFLAkxUsyGm0b73D36A9lYfVIhrh8S1Q6BfTWJm3RsFm30ZSJufzxJJIZFhEX75XxrtOSRrD0htDYDQao+t2xG3vKIVS+fnA7mXDo/+4FfHTvBf+hFikXM3BOECT5bj+ruPbEcZZf5/QFQQGgX+9Kf/NgaNB6yuxJtLl+4LQissJG7Ex9OEdbFiO402V4K9B7K4BUHq7Lkxen2pCl7SZyQfioDK2nJ8663vjl7UxXbqcqXM3osT4a5iNNzGXy2ulEM3xSKCvQzjjgQrKQ92/WhWUhq2C+HdK1lz3kMNMpact7rVe0CPIIcAsZcOtKVQDcoL9Pyd/5a86IqhYZzGzwRiKSz9VeTvPoZnAaRycvry0cPSB1J6rabz97GNu2063Z/N8ca3kZ/2R9QgtLUwJ+oURM5+woqtEbpU1pr64YYV22nYzs9iCYvvIt+JnwnQRbqnb0TyfyK5cdqClfBHNl0oP27x9CvHSt3Kz0SXGezql27tvithqHHFjr0BOczJ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' %>');"></div>
+                        </div>
+                        <div class="others">
+                            <div class="name"><%=  item.user_name %><span class="prodata"><%= item.time_create %></span>
+                                    <span class="float-right">
+                                        <%
+                                        var num = item.point*10;
+                                        var yu = num%5,zh = Math.floor(num/5);
+                                        if(yu>=2.5){
+                                            zh++;
+                                        }
+                                        var yu2 = zh%2,zh2 = Math.floor(zh/2);
+                                        //console.log(zh,zh2,yu2,num%5,num/5,Math.floor(num/5));
+                                        %>
+                                        <% for(var j=0;j<zh2;j++){ %>
+                                        <img width="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2REIxQUU3RDc2QTUxMUU0ODIxRTk2Q0M0Nzc2MzZFOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2REIxQUU3RTc2QTUxMUU0ODIxRTk2Q0M0Nzc2MzZFOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZEQjFBRTdCNzZBNTExRTQ4MjFFOTZDQzQ3NzYzNkU5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZEQjFBRTdDNzZBNTExRTQ4MjFFOTZDQzQ3NzYzNkU5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+gnIH5AAAAdNJREFUeNrE10soRFEYB/B7J48Q8lqMFKGs2CDTsJEFFiiPrMgrpWxEipU8IoksrEgslIlZWBEWFpJotpQiNraeKcYY/1PfrYm5M+fc7rn3q1/N4845//s4j1GDrh7FQCXCNHTAD6zBJHyKNhRjoPNkOARXyGfjUAGN8CHSmMNAgNU/nWtVA8uijYkGaCd61Qf1sgLEwwLHcUsit1YkQBfkcBxXBG1mB2BnNCoQdgxUM0ZBBuRBA+QLBCiGETiGe3jiCRBLD1AtuKGAhpzRmg95/QK3cAoHNIwD7AuVJqJOmIVsxZp6gGHwsiswBIuKtZULO9DLrsAjXjgVe+qOjYIUxb5KcNCTalcdsQBT2hNpcX3BHAvggxkbArDJ6lqbCSfAY2Hn69rI0wIEaS7Ys6DzLegPtxawe9IKGxI7X6ETDegtRt/QTVsss4st04O0hYu6GvolBPCLLMflEgKU8QaIgxIJAUp5AzgphNmVCuk8AbIkjoJMngBpEgNwXYFXgQaDggGeeQJc0aQUrU7o31AlnHMc/07bsqgB3mA7QkNn0ATVcEnv3TSL+iL8bjPcXKC3Kx6gq9ACSXAD+7ALFzq3wkuqoBnqoJA2pB7aA/6rXwEGAFUsVVc9CdTOAAAAAElFTkSuQmCC"/>
+                                        <% } %>
+                                        <% for(var k=0;k<yu2;k++){ %>
+                                        <img width="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBOTEyQUY1QzczQ0UxMUU0QTdGMUMxN0U1MDkwMDM4MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBOTEyQUY1RDczQ0UxMUU0QTdGMUMxN0U1MDkwMDM4MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE5MTJBRjVBNzNDRTExRTRBN0YxQzE3RTUwOTAwMzgwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE5MTJBRjVCNzNDRTExRTRBN0YxQzE3RTUwOTAwMzgwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+vpZv4AAAAWBJREFUeNpi/G+RxEAkSAHihmdrmxmBdD0QzyFGEwuRhqcC8Swk/mwgZkITwwqYiDBcFYgnYREHialTw4IeIObAIs4OlaPIAkMg9sUj7wPEpuRawAvEZUDMSMAR5VC1eCMZZJET1LWWQKyBTxMaCIbiz0B8A4hPAPFmIN4LxP9YoJG4EhoclABeaHCBcC4QXwTicJDLl1HBcGxAH4iXMhGT1CgAGiALdtPQgp0gC6qB+DsNDP8BxDVM0JgHFQX/qWj4f2jZdR2WD5ZCY/4flQzPg5qJktGmAnEsEP+iwHCQ3hggnoIrJ4OS7HMKLHgFNQNnUSECxPIUWCADxFL4LNCnQhxo4bNAkgoWSOKzgJcKFvDis+AzAc3PiUgEX/BZcBiI/2DRBLK4BYjVoBjE/oRF3V8gPoTPgodAnAPEr4H4KxAfA+JiIJYD4lqo675A2fJQuWNQta+hmfUBsoEAAQYAZn9DrLlnrFUAAAAASUVORK5CYII=" />
+                                        <% } %>
+                                        <% for(var t=0;t<5-yu2-zh2;t++){ %>
+                                        <img width="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMkZCMEM3OTc0NDAxMUU0ODAzQUY3RDlENEI0NUUyMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMkZCMEM3QTc0NDAxMUU0ODAzQUY3RDlENEI0NUUyMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMyRkIwQzc3NzQ0MDExRTQ4MDNBRjdEOUQ0QjQ1RTIwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMyRkIwQzc4NzQ0MDExRTQ4MDNBRjdEOUQ0QjQ1RTIwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+DSPycAAAAWNJREFUeNpifPr0KQORIAWIG4CYEYjrgXgOMZpYiDQ8FYhnIfFnAzETmhhWwEiED1SB+BIQc6CJ/wRifSC+iU8zExGu78FiOAiwQ+Uo8oEhEJ+FhjsuYAbEp8nxAS8QlxEwHATKoWrx+gBkkRMQ+wKxJRBr4NOEA3wG4htAfAKINwPxXiD+B7IAFIkrocFBTXARiMNBFoDCz4SBNuAsyIJPZAQHseArKOx3M9AO7AT5ABSh54CYk8qG/wBiIyZozIOKgv9UNPw/tOy6DssHS4E4F5SsqGR4HtRMjJwcBcTzgZiNTMN/AXEiEC/DV1Q8AGJ5Mi14AsSy+MoiESB+TWEQSQPxM1xlkT4V4kALX2EnSQULJPFZQI0czYvPgs8END+HYnzgCz4LDgPxHxxFcQsQq0ExiP0Ji7q/QHyIUI2WDsTNQMwFLXLXAvE8IP6Apk4AiJOAOBiaOL5BWxvTkRUBBBgAuTJc64iXBeIAAAAASUVORK5CYII=" />
+                                        <% } %>
+                                    </span>
+                            </div>
+                            <div class="promise"><%=  item.content %></div>
+                            <% if(item.imgurl!=null){%>
+                            <div class="promise">
+                                <% for(i=0;i<item.imgurl.length;i++){ %>
+                                <img class="evaimg-trigger lazy" src="http://h5.quxiu.me/assets/img/empty.png" dataimg="<%= item.imgurl[i].img %>"  i="<%= i %>" itemId="<%= index %>" main="true" width="45" height="45"/>
+                                <%} %>
+                            </div>
+                            <% }%>
+                        </div>
+                    </div>
+                    <% });%>
+
+                </div>
+            </a>
+            <% }else{%>
+            <p class="pro-noeva"><img width="16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBNjRGMkI3RTc0NDYxMUU0ODAzQUY3RDlENEI0NUUyMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBNjRGMkI3Rjc0NDYxMUU0ODAzQUY3RDlENEI0NUUyMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE2NEYyQjdDNzQ0NjExRTQ4MDNBRjdEOUQ0QjQ1RTIwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE2NEYyQjdENzQ0NjExRTQ4MDNBRjdEOUQ0QjQ1RTIwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++BYCDAAAA2VJREFUeNrEl01IVFEUx8fRMc382JQEYpRuMrJsMxQtslmY1qY06QMkqGiVUCHZojIDCxEKCsGFuQqDpo9Fn9Lkoq+diUEtUpQMSWqRmn0oWv8bvyev1zjzRmM68GPuu+/cc87cd++55ya0tLR4XMoisVUUi7Viucjk3YjoF92iU9wVX9wYTXKhs0KcELtF2iw6S8AvDolx0S7Oi75Ixr0R3qVg4I04gPN3okmUiVyRCrn0NaGTxpjX2EiJNYA88UIcF8kYqmQ2asR9MSi+wyB9NehUMiYZG8ZWvtsA1olnfOcpUSeKxHWeo8kUukWMncLWU/oiBmCifCCyxagoEWfEhCd2mWBsCbaMzYfOmbAHkErki1nVm0TIM38JYWsE20F8/RXAadu0V4iXnn8nxlY5ttfwaf4IwCy6o7TPike2waViCEpdOJtNP4RtI0fwORNArfCx5RocBlvFUmh1EUAk/QZ8+MgtvwNIJ8kYOSUmIxhPiHHqnfrG9knau4xvLwnESjI3wxgxCeWDeC/2u3AaTf+WLVmVmVQc4IXZAdNhBtxjOt1KNP1pfB0zvs0MFNoWSbzE8lXotVaj5FUcA7B85ZkAMnj4FMcAPvKbYU9EPz3/QbzkaQ9pMl5i+Rr12gqG1XEMwPLVZwLo4SEQIdrMOTjJjDCrlq8er21L7AxzPGdT45nyKjEG54mM6aRUc372Cms7ekkc45RV2x3K68UqDpUr5PBo4kO3lLEbHO+Nj2Xiq/FtAhgT12wnod3JbdFMu0o8EQURnBegU8VzMzbswdXTNjM0Zk35OQ6KldYpZZNqcYm2n7O9TWzmIEun3UZZ7kf3MmPtUkuQkxSrM9/c7IQLthMx4KjxqlkjQxSa+1g7oxCiz4eO0T3sqCEDFD1GLopeZ0VUx44wC+hGmAIySMW7h/aArSoeoG8vOkHH2CJsJuKjLtzF5Btl03O2z2Oxg5VsyQ++XXsMO6KYIziTFFzOAgxbFZtp2SKGRZbooIDwzSEP+BjbgfNhbPdGuxd0iY1MVRKrtpvIvS7Tezlj6rHRg80utzejXlZzI/V9Ad+1nz7zT3LEAsihrxGdIGMm6PM7//lMzebidpzP9cosvoUup9+sp6s4fzvf27GJ/CCl9DbH9TwLnc+O6/kdt9fzXwIMAPf+0ii10seYAAAAAElFTkSuQmCC" />
+                暂时还没有评价哦~
+            </p>
+            <% }%>
+        </div>
+    </div>
+        <% if(item.comment_num && item.comment_num>5){ %>
+        <!--查看评价-->
+        <div class="vieweva">
+            <a href="comment.html?productId=<%= item.productid%>"><p class="eva-trigger">查看更多评价</p></a>
+        </div>
+        <% }%>
+    <% }); %>
+<% }); %>
+</script>
+<script type="text/template" id="tpl-masklides">
+    <% _.each(itemList, function (item) { %>
+    <a class="slider-item" style="width:<%= w %>px; " href="javascript:;"><img width="<%= item.img_width %>" src="<%= item.img %>" /></a>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-recom-content">
+    <% _.each([itemList[0].products], function (item) { %>
+    <p><%= item.brief %></p>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-dia-sku-top">
+    <% _.each(itemList, function (item) { %>
+    <li>
+        <% if(item.images!=null){ %><img src="<%=  item.images[0].url %>" width="50" /><% }%>
+    </li>
+    <li class="sku-title">
+        <h1><%= item.name %></h1>
+        <h2>
+            <% if(item.suxing){ %>
+                <% var isPhone=false; _.each(item.suxing[0].xxsx, function (item_sx, index) { %>
+                    <% if(!isPhone){ %>
+                        <span class="price-big"><span class="price-icon">￥</span><span id="sku-bigpri"><%=  item_sx.is_phone_price=="1" ? parseFloat(item_sx.phone_price) : parseFloat(item_sx.current_price) %></span></span>
+                        <span class="price-small line-through">￥<%= parseFloat(item.origin_price) %></span>
+                        <% if(item_sx.is_phone_price=="1" && item_sx.current_price > item_sx.phone_price){%><span class="label phone-price">手机专享价</span><%} %>
+                    <% isPhone=true;} %>
+                <% });%>
+            <% }else{ %>
+                <span class="price-big"><span class="price-icon">￥</span><span id="sku-bigpri"><%=  item.is_phone_price=="1" ? parseFloat(item.phone_price) : parseFloat(item.current_price) %></span></span>
+                <span class="price-small line-through">￥<%= parseFloat(item.origin_price) %></span>
+                <% if(item.is_phone_price=="1" && item.current_price > item.phone_price){%><span class="label phone-price">手机专享价</span><%} %>
+            <% }%>
+
+           <!-- <span class="price-big">￥<span id="sku-bigpri"><%=  item.current_price %></span></span>
+            <span class="price-small line-through">￥<%= item.origin_price %></span>-->
+            <!--<span class="payoff"><%= Number(item.current_price/item.origin_price*10).toFixed(1) %>折</span>-->
+        </h2>
+    </li>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-dia-sku-size">
+    <h1>尺寸：</h1>
+    <% _.each(itemList, function (item) { %>
+    <span barcode="<%= item.id %>" current_price="<%= item.is_phone_price=="1" ? item.phone_price : item.current_price %>" is_stock="<%= item.is_stock %>" select="false"><%= item.name %></span>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-loveitems">
+    <% _.each(itemList, function (item, index) { %>
+    <div class="list-item <%= index%2 ? 'even' : 'odd' %>">
+        <!--<a class="action" data-id="<%= item.productid %>" href="detail.html?productId=<%= item.productid %><%= brandId?'&brandId='+brandId:''%>">-->
+        <a class="action" data-id="<%= item.productid %>" href="<%= Global.formatTitleLink(item.productid, brandId, alias) %>">
+        <!--<a class="action" data-id="<%= item.productid %>" href="<%= item.alias %>goods-<%= item.productid %>.html<%= brandId?'?brandId='+brandId:''%>">-->
+            <div class="item-main">
+                <div class="lazy img" dataimg="<%= Global.formatImgSrc(item.img) %>"></div>
+                <div class="profile">
+                    <!--<div class="item-name"><%= item.name %></div>-->
+                    <div class="price">
+                        <div class="price-new"><span>&yen;</span><% var price = item.is_phone_price=="1" ? item.phone_price: item.current_price %><%= Number(price).toFixed(1) %><!--<del class="price-old"><%= Number(item.origin_price).toFixed(1) %></del>--></div>
+                        <div class="discount"><%= Number(item.current_price/item.origin_price*10).toFixed(1) %>折</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-brands">
+    <%  _.each(itemList, function (item, index) { %>
+    <div class="brand-body"><a class="brands-item" href="<%= Global.formatLink(item.brandId,alias) %>">
+        <div class="item-main">
+            <div class="item-hd">
+                <div class="logo" dataimg="">
+                    <img src="<%= item.logo||'http://h5.quxiu.me/assets/img/empty.png' %>" width="60" height="30" />
+                </div>
+                <div class="others">
+                    <div class="recom-content" id="recom-content">
+                        <p class="li-s-title">
+                            <%= item.name %>
+                        </p>
+                        <p class="li-s-content">上新：<span class="red"><%= item.goodsCount %>件</span> <span class="line">|</span> 折扣：<span class="red"><%= item.good_price || 0 %>元起</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a></div>
+    <% }); %>
+</script>
+<script>
+    function getParamsFromUrl (){
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = pair[1];
+
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [ query_string[pair[0]], pair[1] ];
+                query_string[pair[0]] = arr;
+
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(pair[1]);
+            }
+        }
+        return query_string;
+    }
+
+    var params = getParamsFromUrl();
+    //location.replace('http://m.ve.cn/?ctl=goods&id=' + params['productId']);
+</script>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-api/api.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-gotop/gotop.js,lib/lib-slider/slider.js,lib/lib-mask/mask.js,lib/lib-notification/notification.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-number/number.js,lib/lib-countdown/countdown.js,lib/lib-fixedsticky/fixedSticky.js,lib/lib-swiper/swiper.js&t=20150306"></script>
+<script src="assets/h5/detail.js?t=20150306"></script>
+</body>
+</html>

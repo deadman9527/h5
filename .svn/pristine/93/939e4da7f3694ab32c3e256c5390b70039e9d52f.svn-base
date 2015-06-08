@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="../assets/gift/index.css" rel="stylesheet" type="text/css" />
+    <title>年终答谢礼品</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="banner"></div>
+    <div class="status-bar">
+        <div class="status" id="status">活动进行中</div>
+        <div class="cd-box">
+            <span>剩余时间</span><span class="countdown"></span>
+        </div>
+    </div>
+    <div class="main-bd" id="items"></div>
+    <div class="intro">
+        <div class="title">年终答谢礼品须知</div>
+        <div class="detail">
+            <p>1.礼品数量有限，抢空后不再补货，建议您尽快提交订单；</p>
+            <p>2.免费礼品每会员每订单只限领取1件；</p>
+            <p>3.全场满88元包邮，不满88元需支付15元运费；</p>
+            <p>4.全场参与满129减20活动（奶粉纸尿裤除外）；</p>
+            <p>5.满减活动不能同时参与优惠券活动；</p>
+            <p>6.本活动最终解释权归唯一优品所有。</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-item">
+    <div class="item-list clearfix">
+        <% _.each(itemList, function (item) { %>
+        <div class="list-item">
+            <a class="action" href="http://h5.ve.cn/detail.html?productId=<%= item.id %>">
+                <div class="item-main">
+                    <div class="lazy img" dataimg="http://img.ve.cn/<%= item.small_icon %>"></div>
+                    <div class="profile">
+                        <div class="item-name"><%= item.name %></div>
+                        <div class="price">
+                            <span class="price-old"><del><span>&yen;</span><%= item.origin_price %></del></span>
+                        </div>
+                        <div class="action-btn">免费领取</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% }); %>
+    </div>
+</script>
+
+<script src="http://h5.ve.cn/assets/js/3rd/zepto.min.js"></script>
+<script src="../assets/gift/index.js?t=1418227200"></script>
+
+</body>
+
+</html>
+

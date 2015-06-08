@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>分享测试</title>
+    <style>
+        li{
+            line-height: 1.5;
+        }
+        img{
+            max-width: 100%;
+        }
+        a{
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>VE客户端分享H5</h1>
+<h2>配置数据：</h2>
+<ul>
+    <li>app-share-title: 测试标题</li>
+    <li>app-share-content: 测试分享内容</li>
+    <li>app-share-url: http://h5.quxiu.me</li>
+    <li>app-share-desc: 分享描述</li>
+    <li>app-share-image: <img style="vertical-align: top; width: 100px; height: 100px;" src="http://img01.ve.cn/party/default/13c8b31e7b1c738a9211984b8fc872b6.jpg" alt=""/></li>
+</ul>
+<a href="http://h5.quxiu.me/sharesdk.html">分享链接</a>
+<a id="share-btn" href="javascript:void(0)">分享到</a>
+<a id="share-btn-error" href="javascript:void(0)">不合法的分享到</a>
+<a id="share-btn-weibo" href="javascript:void(0)">分享到微博</a>
+<a id="share-btn-weixin" href="javascript:void(0)">分享到微信</a>
+<a id="share-btn-pengyouquan" href="javascript:void(0)">分享到朋友圈</a>
+<script>
+    alert('Cookie: ' + document.cookie);
+
+  document.getElementById('share-btn').addEventListener('click', function () {
+      alert('正常的分享啦');
+
+      var title = 'xxyy';
+      var text = 'zzzzzzz';
+      var url = encodeURIComponent('http://h5.quxiu.me?a=bcd#cd');
+      var image = encodeURIComponent('http://img01.ve.cn/party/default/d45ad17636c87d38d9fded77e9df96e1.jpg');
+
+      location.href = 'http://h5.quxiu.me/sharesdk.html?title=' +
+              title + '&text=' + text + '&url=' + url + '&image=' + image+ '';
+  }, false);
+
+    document.getElementById('share-btn-error').addEventListener('click', function () {
+        alert('不正常的分享啦, url & image 不合法');
+
+        var title = '测试';
+        var text = 'zzzzzzz';
+        var url = encodeURIComponent('yy');
+        var image = encodeURIComponent('xx');
+
+        location.href = 'http://h5.quxiu.me/sharesdk.html?title=' +
+                title + '&text=' + text + '&url=' + url + '&image=' + image+ '&app=weibo';
+    }, false);
+
+    document.getElementById('share-btn-weibo').addEventListener('click', function () {
+        alert('分享到微博');
+
+        var title = '测试';
+        var text = 'zzzzzzz';
+        var url = encodeURIComponent('http://h5.quxiu.me?a=bcd#cd');
+        var image = encodeURIComponent('http://img01.ve.cn/party/default/d45ad17636c87d38d9fded77e9df96e1.jpg');
+
+        location.href = 'http://h5.quxiu.me/sharesdk.html?title=' +
+                title + '&text=' + text + '&url=' + url + '&image=' + image+ '&app=weibo';
+    }, false);
+
+    document.getElementById('share-btn-weixin').addEventListener('click', function () {
+        alert('分享到微信');
+
+        var title = '测试';
+        var text = 'zzzzzzz';
+        var url = encodeURIComponent('http://h5.quxiu.me?a=bcd#cd');
+        var image = encodeURIComponent('http://img01.ve.cn/party/default/d45ad17636c87d38d9fded77e9df96e1.jpg');
+
+        location.href = 'http://h5.quxiu.me/sharesdk.html?title=' +
+                title + '&text=' + text + '&url=' + url + '&image=' + image+ '&app=weixin';
+    }, false);
+
+    document.getElementById('share-btn-pengyouquan').addEventListener('click', function () {
+        alert('分享到朋友圈');
+
+        var title = '测试';
+        var text = 'zzzzzzz';
+        var url = encodeURIComponent('http://h5.quxiu.me?a=bcd#cd');
+        var image = encodeURIComponent('http://img01.ve.cn/party/default/d45ad17636c87d38d9fded77e9df96e1.jpg');
+
+        location.href = 'http://h5.quxiu.me/sharesdk.html?title=' +
+                title + '&text=' + text + '&url=' + url + '&image=' + image+ '&app=pengyouquan';
+    }, false);
+
+</script>
+
+<!--start:分享配置-->
+<input id="app-share-title" type="hidden" value="测试标题">
+<input id="app-share-content" type="hidden" value="测试分享内容">
+<input id="app-share-url" type="hidden" value="http://h5.quxiu.me">
+<input id="app-share-image" type="hidden" value="http://img01.ve.cn/party/default/13c8b31e7b1c738a9211984b8fc872b6.jpg">
+<input id="app-share-desc" type="hidden" value="分享描述">
+<!--end:分享配置-->
+</body>
+</html>
+

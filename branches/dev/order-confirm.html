@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/order-confirm.css?t=20141229" rel="stylesheet" type="text/css" />
+    <title>我的</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<script>
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+            location.reload();
+        }
+    })
+</script>
+<body>
+<div class="container">
+    <div class="main">
+        <!--地址栏-->
+        <div id="address">
+        </div>
+        <!--送货时间-->
+        <div class="delivery-container">
+            <div class="delivery-title">
+                <span class="delivery-text">双休日、工作日均可送货</span>
+                <span class="arrow-right"></span>
+            </div>
+            <div class="delivery-content">
+                <div class="row select-row">
+                    <span class="radio radio-active" name="delivery"></span>双休日、工作日均可送货
+                </div>
+                <div class="row select-row">
+                    <span class="radio" name="delivery"></span>工作日可送货
+                </div>
+                <div class="row select-row">
+                    <span class="radio" name="delivery"></span>双休日可送货
+                </div>
+
+            </div>
+        </div>
+        <!--商品列表-->
+        <div id="orders">
+        </div>
+        <!--优惠券 暂时隐藏-->
+        <div class="coupon-container">
+            <!--<input type="text" class="input" placeholder="  您对商家有其他要求可在此添加备注"/>-->
+        </div>
+        <!--发票-->
+        <div class="invoice-container">
+            <div class="invoice-title">
+                <span class="invoice-text">发票</span>
+                <span class="arrow-right"></span>
+            </div>
+            <div class="invoice-content">
+                <div class="row select-row">
+                    <span class="text">发票类型：</span>
+                    <span class="radio radio-active" name="type"></span>不需要
+                    <span class="radio" name="type"></span>个人
+                    <span class="radio" name="type"></span>公司
+                </div>
+                <div class="row select-row">
+                    <span class="text">发票内容：</span>
+                    <span class="radio radio-active" name="content"></span>日用品
+                    <span class="radio" name="content"></span>用品
+                    <span class="radio" name="content"></span>化妆品
+                </div>
+                <div class="row input-row">
+                    <span class="text">发票抬头：</span>
+                    <div class="input-container">
+                        <input type="text" class="input invoice-input" placeholder="  可以输入个人或单位名称"/>
+                    </div>
+                </div>
+                <div class="invoice-notice">发票金额不包含优惠券支付部分</div>
+            </div>
+        </div>
+        <!--支付方式-->
+        <div class="pay-container">
+            <!--其他支付方式 暂时隐藏-->
+            <a href="javascript:void(0)" class="pay-button button-primary weixinpay payinfo" paytype="wxpay">微信支付</a>
+            <a href="javascript:void(0)" class="pay-button button-primary alipay payinfo" paytype="alipay">支付宝支付</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="loading">正在玩命加载中……</div>
+<script type="text/template" id="tpl-address">
+    <!--地址栏-->
+    <% if(addressData){ %>
+    <a href="address-select.html?is_select=1<%= proType?'&proType=1':'' %>" class="address-container" data-id="<%= addressData.id %>">
+        <p class="person-information"><span class="name"><%= addressData.name %> </span><span class="tel"><%= addressData.phone %></span></p>
+        <p class="address"><span><%= (addressData.province||'')+(addressData.city||'')+(addressData.area||'')+(addressData.town||'') %></span><br>
+            <span class="address-content"><%= addressData.address %></span> </p>
+        <span class="arrow-right"></span>
+    </a>
+    <% }else{ %>
+    <a href="<% if(isLogin){ %>address-add.html<% }else{ %>info-confirm.html<%= proType?'?proType=1':'' %> <% }; %>" class="add-address">
+        <span class="add"></span><span class="text"><% if(isLogin){ %>新建<% }else{ %>填写<% }; %>收货地址</span>
+        <span class="arrow-right"></span>
+    </a>
+    <% }; %>
+</script>
+<script type="text/template" id="tpl-goods">
+    <% _.each(products, function (product, index) { %>
+    <div class="order-information">
+        <div class="goods-title">
+            <span class="title-text"><%= product.name %></span>
+        </div>
+        <!--商品列表-->
+        <ul class="goods-container">
+            <% _.each(product.orders, function (order, i) { %>
+            <li>
+                <div class="good-container">
+                    <img  class="lazy img" src="http://h5.quxiu.me/assets/img/blank.png" dataimg="<%= Global.formatImgSrc(order.img) %>" width="60" height="60" alt=""/>
+                    <div class="good-information">
+                        <p class="good-name"><%= order.product_name %></p>
+                        <p class="good-number"><span class="icon-x"></span><span><%= order.num %></span></p>
+                        <% if(order.suxing && order.suxing.attr_name){ %>
+                        <p class="good-type"><%= order.suxing.attr_name %></p>
+                        <% } %>
+                        <div class="promotion-container">
+                            <% if(order.promotions && order.promotions[0]){ %>
+                            <% _.each(order.promotions, function (promotion, j) { %>
+                            <% if(promotion.type=='discount'){ %>
+                            <p class="promotion bg-green">满减</p>
+                            <% } %>
+                            <% if(promotion.type=='gift'){ %>
+                            <p class="promotion bg-red">满赠</p>
+                            <% } %>
+                            <% }); %>
+                            <% } %>
+
+
+                            <% console.log(order);if(parseFloat(order.free_ship)){ %>
+                            <p class="promotion bg-yellow">包邮</p>
+                            <% } %>
+                        </div>
+                    </div>
+                    <p class="good-price">￥<%= parseFloat(order.price).toFixed(2) %></p>
+                </div>
+                <% if(order.promotions && order.promotions[0]){ %>
+                <% _.each(order.promotions, function (promotion, j) { %>
+                <% if(promotion.type == 'gift'){ %>
+                <div class="gift-container">
+                    <div class="gift">
+                        <div class="gift-tag"></div>
+                        <% _.each(promotion.goods_gift, function (gift, k) { %>
+                        <div class="gift-name"><%= gift.goods_name %></div>
+                        <!--<div class="gift-price">￥<%= parseFloat(gift.gift_price).toFixed(2) %></div>-->
+                        <% }); %>
+                    </div>
+                </div>
+                <% } %>
+                <% }); %>
+                <% } %>
+            </li>
+            <% }); %>
+        </ul>
+        <!--商品总价-->
+        <div class="goods-sum">
+            <span class="sum-text">商品总价:</span>
+            <span class="sum-price">￥<%= parseFloat(product.sum).toFixed(2) %></span>
+        </div>
+    </div>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-coupon">
+    <% if(proType?data.sea_sum_discount:data.sum_discount){ %>
+    <div class="row">
+        <span class="text">满减</span>
+        <span class="value discount">￥<%= parseFloat(proType?data.sea_sum_discount:data.sum_discount).toFixed(2) %></span>
+    </div>
+    <% } %>
+    <div class="row">
+        <span class="text">运费</span>
+        <span class="value delivery"><%= (proType?data.sea_free_ship_price:data.free_ship_price)?('￥'+parseFloat(proType?data.sea_free_ship_price:data.free_ship_price).toFixed(2)):'包邮' %></span>
+    </div>
+    <% if(isLogin){ %>
+    <a href="coupon-select.html" class="row coupon-row">
+        <span class="text">优惠券</span>
+        <span class="arrow-right"></span>
+        <p class="unselected">请选择优惠券</p>
+    </a>
+    <% } %>
+</script>
+<script type="text/template" id="tpl-pay">
+    <% if(proType){ %>
+    <div class="warning" style="display: none">
+        <img src="http://img01.ve.cn/party/6db6211b17fb83767f33c5095a518489.png" width="14" height="14" alt=""/>
+        <p class="warning-text">海淘商品需办理清关手续，请到客户端“我的”进行实名认证</p>
+    </div>
+    <% } %>
+    <p class="pay-text"> ￥<%= parseFloat(proType?data.sea_total_price:data.total_price).toFixed(2) %><%= (proType?data.sea_sum_discount:data.sum_discount)?(' - ￥'+parseFloat(proType?data.sea_sum_discount:data.sum_discount).toFixed(2)+'满减'):'' %> + ￥<%= parseFloat(proType?data.sea_free_ship_price:data.free_ship_price).toFixed(2) %>运费<%= value?(' - ￥'+parseFloat(value).toFixed(2)+'优惠'):'' %></p>
+    <p class="pay-price">需付：￥ <%= (parseFloat(proType?data.sea_total_price:data.total_price)-parseFloat(proType?data.sea_sum_discount:data.sum_discount)+parseFloat(proType?data.sea_free_ship_price:data.free_ship_price)-parseFloat(value)).toFixed(2) %> </p>
+</script>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-api/api.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-notification/notification.js,lib/lib-env/env.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js&20150305"></script>
+<script src="assets/h5/order-confirm.js?t=20150305"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+    "name": "ctrl.searchbar",
+    "description": "一个简单的搜索条控件",
+    "version": "0.1.0",
+    "homepage": "http://gitlab.alibaba-inc.com/mtb/ctrl-searchbar",
+    "author": ["帽匠,冰琼"],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.alibaba-inc.com:mtb/ctrl-searchbar.git"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "/blob/master/LICENSE-MIT"
+        }
+    ],
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-depconcat": "~0.2.0",
+        "grunt-depcombo": "~0.2.2",
+        "grunt-cmdwrap": "~0.1.0",
+        "grunt-contrib-copy": "~0.4.1",
+        "grunt-contrib-less": "~0.6.4",
+        "grunt-contrib-cssmin": "~0.6.0",
+        "grunt-contrib-uglify": "~0.2.0",
+        "grunt-contrib-watch": "~0.4.0",
+        "grunt-contrib-clean": "~0.5.0"
+    },
+    "dependencies": {},
+    "combo": {
+        
+    },
+    "keywords": [
+        "ctrl",
+        "searchbar"
+    ]
+}

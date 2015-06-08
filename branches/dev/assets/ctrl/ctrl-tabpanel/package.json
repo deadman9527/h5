@@ -1,0 +1,45 @@
+{
+  "name": "ctrl.tabpanel",
+  "description": "标签面板",
+  "version": "0.1.6",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/ctrl-tabpanel",
+  "author": [
+    "寒泉",
+    "渚薰"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/ctrl-tabpanel.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cmdwrap": "^0.1.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-css2js": "^0.2.4",
+    "grunt-depcombo": "~0.2.3",
+    "grunt-depconcat": "~0.2.1"
+  },
+  "dependencies": {},
+  "combo": {
+    "ctrl-tabheader": "0.4.10"
+  },
+  "keywords": [
+    "ctrl",
+    "tabpanel",
+    "标签面板"
+  ]
+}

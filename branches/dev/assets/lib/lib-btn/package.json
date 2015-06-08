@@ -1,0 +1,22 @@
+{
+  "name": "lib.btn",
+  "description": "btn",
+  "version": "1.0.0",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-btn",
+  "author": "caochun <caochun.cr@taobao.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-btn.git"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "combo": {},
+  "keywords": [
+    "btn",
+    "lib"
+  ]
+}

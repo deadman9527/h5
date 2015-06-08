@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <meta property="qc:admins" content="34126760476563674012454771660454" />
+    <link href="assets/h5/login.css" rel="stylesheet" type="text/css" />
+    <title>登录</title>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101184046" data-redirecturi="http://h5.quxiu.me/callback.php" charset="utf-8"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=89074870" type="text/javascript" charset="utf-8"></script>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+
+<div class="container">
+    <div class="other" style="display: block;bottom:auto;width:100%;position: relative;border: 0;margin-top:0;margin-bottom: 20px;height: 60px;">
+        <!--<div class="text-center"><span class="other-tips">或使用以下方式登录</span></div>-->
+        <a id="qq_login_btn" href="javascript:void(0)" style="color:#333;font-size: 12px;float: left;width: 45%;margin-right: 3%;">
+            <img src="http://img01.ve.cn/party/2aa6926ec7f1761ab0876c0d5d97300c.jpg" alt=""/>
+        </a>
+        <a id="login-sina" href="javascript:void(0)" style="float: left;width: 45%;">
+            <img src="http://img01.ve.cn/party/e29b2cc95ba9d834346040c7b2c6e6a0.jpg" /></a>
+        <!-- <div class="other-items">
+             &lt;!&ndash;sina&ndash;&gt;
+             <div class="other-item">
+                 <a id="login-sina" href="javascript:void(0)">
+                     <img src="http://img.ve.cn/public/attachment/201412/11/21/548929148206c.png" alt=""/>
+                 </a>
+                 <span>新浪微博</span>
+                 <div id="wb_connect_btn"></div>
+             </div>
+             &lt;!&ndash;alipay&ndash;&gt;
+             <div class="other-item">
+                 <a id="login-alipay" href="javascript:void(0)">
+                     <img src="http://img.ve.cn/public/attachment/201412/11/21/54892930a62e2.png" alt=""/>
+                 </a>
+                 <span>支付宝</span>
+             </div>
+             &lt;!&ndash;weixin&ndash;&gt;
+             <div class="other-item">
+                 <a id="login-weixin" href="javascript:void(0)">
+                     <img src="http://img.ve.cn/public/attachment/201412/11/21/548929243244a.png" alt=""/>
+                 </a>
+                 <span>微信</span>
+             </div>
+             &lt;!&ndash;QQ&ndash;&gt;
+             <div class="other-item  last-item">
+                 <a id="qq_login_btn" href="javascript:void(0)">
+                     <img src="http://img.ve.cn/public/attachment/201412/11/21/548928f18a2ac.png" alt=""/>
+                 </a>
+                 <span>QQ</span>
+                 <div id="qqLoginBtn" style="display: none;"></div>
+             </div>
+         </div>-->
+    </div>
+    <div class="main">
+
+        <form id="login" autocomplete="off">
+            <div class="form-item">
+                <label>账号</label>
+                <div class="input-box">
+                    <input id="username" type="text" placeholder="请输入邮箱/手机号" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="form-item">
+                <label>密码</label>
+                <div class="input-box">
+                    <input class="login-passwd" id="password" type="password" placeholder="请输入您的密码"  autocomplete="off"/>
+                </div>
+                <a href="getpassword.html" id="forget">忘记密码？</a>
+            </div>
+
+            <div class="form-sub">
+                <a class="form-icon" id="submit">登录</a>
+                <a class="form-icon" id="register" href="register.html">注册</a>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+<!--<a href="javascript:;" id="sinaLogin">微博登陆</a>
+<a href="javascript:;" id="qqLogin">QQ登陆</a>-->
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-storage/storage.js,lib/lib-login/login.js,lib/lib-api/api.js,ctrl/ctrl-topbar/topbar.js,lib/lib-httpurl/httpurl.js"></script>
+<script>
+    /**
+     * 登陆
+     *
+     * Created by huangdonglin on 14-12-10.
+     *
+     * @author jingshuo
+     *
+     */
+    ;(function ($) {
+        var main = {
+            init: function () {
+                this.addEvents();
+                this.transmit();
+                this.topbar = new ctrl.topBar({
+                    isIndex: false
+                });
+            },
+
+            addEvents: function () {
+                var that = this;
+
+                $('#submit').on('click', function () {
+                    that.submit();
+                });
+
+                /*$("#qq_login_btn").on('click',function(){
+                 $("#qqLoginBtn a").trigger('click');
+                 });*/
+                /*$("#login-sina").on('click',function(){
+                 $(this).attr('href','https://api.weibo.com/oauth2/authorize?client_id=2441162563&response_type=code&redirect_uri=http://h5.quxiu.me/apilogin-callback.html');
+                 });*/
+                $("#login-alipay").on('click',function(){
+                    $(this).attr('href','http://localhost/alipay/alipayapi.php').trigger('click');
+                });
+            },
+
+            //参数传递
+            transmit: function(){
+                var httpUrl = new lib.httpurl(location.href);
+                var params = httpUrl.params;
+                params['redirectUrl'] = params['redirectUrl']? params['redirectUrl']:'';
+
+                var isOnline = location.href.indexOf('http://h5.quxiu.me') > -1;
+                var redirectUrlLink='',redirectUrlLink2='';
+                if (isOnline) {
+                    redirectUrlLink = params['redirectUrl'] ? "http://h5.quxiu.me/getpassword.html?redirectUrl=" + encodeURIComponent(params['redirectUrl']) : "http://h5.quxiu.me/getpassword.html";
+                    $('#forget').attr('href',redirectUrlLink);
+
+                    redirectUrlLink2 = params['redirectUrl'] ? "http://h5.quxiu.me/register.html?redirectUrl=" + encodeURIComponent(params['redirectUrl']) : "http://h5.quxiu.me/register.html";
+                    $('#register').attr('href',redirectUrlLink2);
+                } else {
+                    redirectUrlLink = params['redirectUrl'] ? "getpassword.html?redirectUrl=" + encodeURIComponent(params['redirectUrl']) : "getpassword.html";
+                    $('#forget').attr('href',redirectUrlLink);
+
+                    redirectUrlLink2 = params['redirectUrl'] ? "register.html?redirectUrl=" + encodeURIComponent(params['redirectUrl']) : "register.html";
+                    $('#register').attr('href',redirectUrlLink2);
+                }
+                $("#login-sina").on("click",function(){
+                    lib.storage.set("CallBackUrl",encodeURIComponent(params['redirectUrl']));
+                    location.href = "https://api.weibo.com/oauth2/authorize?client_id=2441162563&redirect_uri=http%3A%2F%2Fh5.quxiu.me%2Fthirdlogin%2Fcallback.php&response_type=code" ;
+                });
+                $("#qq_login_btn").on("click",function(){
+                    lib.storage.set("CallBackUrl",encodeURIComponent(params['redirectUrl']));
+                    var url = "http://h5.quxiu.me/thirdlogin/qqindex.php";
+                    location.href = url;
+                });
+
+            },
+
+            // 登陆
+            submit: function () {
+                var that = this;
+
+                if(that.isAjax){
+                    return;
+                }
+
+                // 验证手机号码的合法性
+                if (this.verify("tel")) {
+                    that.isAjax = true;
+
+                    // md5 password
+                    lib.md5 && (this.password = lib.md5(this.password));
+
+                    lib.api.get({
+                        api: {
+                            c: 'user',
+                            a: 'login'
+                        },
+                        data: {
+                            phone: this.username,
+                            password: this.password
+                        },
+
+                        success: function (data) {
+                            //记录用户的登录
+                            lib.h5log.log(["setCustomVariable", 1, "userId", data.user.userId, "visit"]);
+                            var redirectUrl = null;
+                            console.log(data);
+                            lib.login.login(data, redirectUrl);
+                        },
+
+                        error: function (data) {
+                            if (data && data.desc) {
+                                alert(data.desc);
+                            }
+                            console.error(data);
+                        },
+
+                        complete: function () {
+                            that.isAjax = false;
+                        }
+                    })
+                }
+            },
+
+            // 验证
+            verify: function () {
+                this.username = $('#username').val();
+                this.password = $('#password').val();
+
+                // 校验
+                if(/^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(this.username)){ //判断用户名是否是手机号码
+                }else if(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(this.username)){ //判断用户名是否是邮箱
+                }else{
+                    alert("用户名不正确，请重新输入！");
+                    return false;
+                }
+                if(this.password.length == 0){
+                    alert("密码不能为空");
+                    return false;
+                }
+                return true;
+            }
+
+        };
+
+        $(function () {
+            main.init()
+        });
+
+    })(Zepto)
+</script>
+<script type = "text/javascript" >
+    QC.Login({//按默认样式插入QQ登录按钮
+        btnId: "qqLoginBtn",	//插入按钮的节点id
+        size: "C_S"
+    });
+</script>
+<!--<script>-->
+    <!--WB2.anyWhere(function (W) {-->
+        <!--W.widget.connectButton({-->
+            <!--id: "wb_connect_btn",-->
+            <!--type: '3,2',-->
+            <!--callback: {-->
+                <!--login: function (o) { //登录后的回调函数-->
+                    <!--alert("login: " + o.screen_name)-->
+                <!--},-->
+                <!--logout: function () { //退出后的回调函数-->
+                    <!--alert('logout');-->
+                <!--}-->
+            <!--}-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
+</body>
+</html>

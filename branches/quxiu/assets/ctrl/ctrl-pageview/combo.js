@@ -1,0 +1,1 @@
+document.write('<script id="combo_url_1415246715132" type="text/javascript" src="http://g.assets.daily.taobao.net/mtb/??lib-promise/2.0.2/promise.debug.js,lib-navigation/0.2.3/navigation.debug.js,lib-animation/2.0.3/animation.debug.js,lib-cubicbezier/1.0.0/cubicbezier.debug.js"></script>');

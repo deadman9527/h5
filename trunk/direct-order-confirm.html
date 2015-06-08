@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/direct-order-confirm.css?t=20150305" rel="stylesheet" type="text/css" />
+    <title>我的</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<script>
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+            location.reload();
+        }
+    })
+</script>
+<body>
+<div class="container">
+    <div class="main">
+        <form id="address">
+            <div class="row note-row">
+                <div class="note-container">
+                    <p>快速结账通道，无需登录／注册</p>
+                    <a href="login.html?redirectUrl=order-confirm.html">已有账号？去登录></a>
+                </div>
+            </div>
+            <div class="row input-row">
+                <span class="text">手机号：</span>
+                <div class="input-container">
+                    <input type="tel" id="phone" class="input" placeholder="请输入手机号"/>
+                </div>
+            </div>
+            <div class="row input-row">
+                <span class="text">验证码：</span>
+                <div class="input-container">
+                    <input type="text" id="code" class="input" placeholder="请输入验证码"/>
+                </div>
+                <a class="reg-icon" id="get-code">获取验证码</a>
+            </div>
+            <!--收货人-->
+            <div class="row input-row">
+                <span class="text">收货人：</span>
+                <div class="input-container">
+                    <input type="text" id="username" class="input" placeholder="请输入收货人"/>
+                </div>
+            </div>
+            <div class="row input-row">
+                <span class="text">所在地区：</span>
+                <div  id="provice" class="input-container">
+                    <span>请选择</span>
+                </div>
+                <!--定位，暂时不上-->
+                <!--<div class="location-container">-->
+                <!--<span class="icon-location"></span>-->
+                <!--定位-->
+                <!--</div>-->
+            </div>
+            <div class="row input-row">
+                <span class="text">详细地址：</span>
+                <div class="input-container">
+                    <input type="text" class="input" id="addressDet" placeholder="请输入详细地址"/>
+                </div>
+            </div>
+            <!--设置默认收货地址，暂时不上-->
+            <!--<div class="row input-row">-->
+            <!--<span class="text">是否设为默认地址：</span>-->
+            <!--<span class="radio radio-active" name="type"></span>是-->
+            <!--<span class="radio" name="type"></span>否-->
+            <!--</div>-->
+
+        </form>
+
+        <!--商品列表-->
+        <div id="orders">
+        </div>
+
+        <!--支付方式-->
+        <div class="pay-container">
+            <!--其他支付方式 暂时隐藏-->
+            <a href="javascript:void(0)" class="pay-button button-primary weixinpay payinfo" paytype="wxpay">微信支付</a>
+            <a href="javascript:void(0)" class="pay-button button-primary alipay payinfo" paytype="alipay">支付宝支付</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="loading">正在玩命加载中……</div>
+<script type="text/template" id="tpl-goods">
+    <% _.each(products, function (product, index) { %>
+    <div class="order-information">
+        <div class="goods-title">
+            <span class="title-text"><%= product.name %></span>
+        </div>
+        <!--商品列表-->
+        <ul class="goods-container">
+            <% _.each(product.orders, function (order, i) { %>
+            <li>
+                <div class="good-container">
+                    <img  class="lazy img" src="http://h5.ve.cn/assets/img/blank.png" dataimg="<%= Global.formatImgSrc(order.img) %>" width="60" height="60" alt=""/>
+                    <div class="good-information">
+                        <p class="good-name"><%= order.product_name %></p>
+                        <p class="good-number"><span class="icon-x"></span><span><%= order.num %></span></p>
+                        <% if(order.suxing && order.suxing.attr_name){ %>
+                        <p class="good-type"><%= order.suxing.attr_name %></p>
+                        <% } %>
+                        <div class="promotion-container">
+                            <% if(order.promotions && order.promotions[0]){ %>
+                            <% _.each(order.promotions, function (promotion, j) { %>
+                            <% if(promotion.type=='discount'){ %>
+                            <p class="promotion bg-green">满减</p>
+                            <% } %>
+                            <% if(promotion.type=='gift'){ %>
+                            <p class="promotion bg-red">满赠</p>
+                            <% } %>
+                            <% }); %>
+                            <% } %>
+
+
+                            <% console.log(order);if(parseFloat(order.free_ship)){ %>
+                            <p class="promotion bg-yellow">包邮</p>
+                            <% } %>
+                        </div>
+                    </div>
+                    <p class="good-price">￥<%= parseFloat(order.price).toFixed(2) %></p>
+                </div>
+                <% if(order.promotions && order.promotions[0]){ %>
+                <% _.each(order.promotions, function (promotion, j) { %>
+                <% if(promotion.type == 'gift'){ %>
+                <div class="gift-container">
+                    <div class="gift">
+                        <div class="gift-tag"></div>
+                        <% _.each(promotion.goods_gift, function (gift, k) { %>
+                        <div class="gift-name"><%= gift.goods_name %></div>
+                        <!--<div class="gift-price">￥<%= parseFloat(gift.gift_price).toFixed(2) %></div>-->
+                        <% }); %>
+                    </div>
+                </div>
+                <% } %>
+                <% }); %>
+                <% } %>
+            </li>
+            <% }); %>
+        </ul>
+        <!--商品总价-->
+        <div class="goods-sum">
+            <span class="sum-text">商品总价:</span>
+            <span class="sum-price">￥<%= parseFloat(product.sum).toFixed(2) %></span>
+        </div>
+    </div>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-pay">
+    <p class="pay-text"> ￥<%= parseFloat(proType?data.sea_total_price:data.total_price).toFixed(2) %><%= (proType?data.sea_sum_discount:data.sum_discount)?(' - ￥'+parseFloat(proType?data.sea_sum_discount:data.sum_discount).toFixed(2)+'满减'):'' %> + ￥<%= parseFloat(proType?data.sea_free_ship_price:data.free_ship_price).toFixed(2) %>运费<%= value?(' - ￥'+parseFloat(value).toFixed(2)+'优惠'):'' %></p>
+    <p class="pay-price">需付：￥ <%= (parseFloat(proType?data.sea_total_price:data.total_price)-parseFloat(proType?data.sea_sum_discount:data.sum_discount)+parseFloat(proType?data.sea_free_ship_price:data.free_ship_price)-parseFloat(value)).toFixed(2) %> </p>
+</script>
+<script src="http://h5.ve.cn/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.ve.cn/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-scroll/combo.js,lib/lib-api/api.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-notification/notification.js,lib/lib-env/env.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js,lib/lib-scroll/scroll.js,ctrl/ctrl-selectmenu/selectmenu.js&20150305"></script>
+<script src="assets/h5/direct-order-confirm.js?t=20150305"></script>
+
+</body>
+</html>

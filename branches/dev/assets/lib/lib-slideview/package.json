@@ -1,0 +1,42 @@
+{
+  "name": "lib.slideview",
+  "description": "实现左右或上下滑动的效果",
+  "version": "0.0.2",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-slideview",
+  "author": {
+    "name": "cc",
+    "email": "lichao.lc@alibaba-inc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-slideview.git"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoversion": "0.0.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-depconcat": "^0.2.0"
+  },
+  "dependencies": {},
+  "combo": {},
+  "keywords": [
+    "lib",
+    "gesture",
+    "slider",
+    "multiview",
+    "multi-desktop"
+  ]
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="趣秀"/>
+    <meta name="description" content="趣秀(quxiu.me)"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/my.css" rel="stylesheet" type="text/css" />
+    <title>我的</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="main">
+        <!--用户头像部分-->
+        <!--<div class="personal-photo">
+            <a href="personinfo.html"><div class="personal-image"><span class="arrow-right"></span></div></a>
+            <div class="personal-text" id="username"></div>
+
+        </div>-->
+        <div class="personal-photo">
+            <div class="personal-image"></div>
+            <div class="personal-text" id="username"></div>
+        </div>
+        <!--订单菜单部分-->
+        <div class="order-container">
+            <ul>
+                <li class="order-status">
+                    <a href="order-list.html#status=1">
+                        <div class="icon icon-1"></div>
+                        <p>待支付</p>
+                        <span class="hot-number" id="nopayOrder">0</span>
+                    </a>
+                </li>
+                <!--<li class="order-status">
+                    <a href="#">
+                        <div class="icon icon-2"></div>
+                        <p>待发货</p>
+                    </a>
+                </li>-->
+                <li class="order-status">
+                    <a href="order-list.html#status=2">
+                        <div class="icon icon-3"></div>
+                        <p>待收货</p>
+                        <span class="hot-number" id="waitReciveOrder">0</span>
+                    </a>
+                </li>
+                <!--<li class="order-status">
+                    <a href="#">
+                        <div class="icon icon-4"></div>
+                        <p>待评价</p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <!--全部订单-->
+        <a href="order-list.html" class="order-all">
+            <span class="menu-icon menu-icon-order-all">
+            </span>
+            <div class="menu-text-container">
+                <span class="menu-text">全部订单</span>
+                <span class="arrow-right"></span>
+            </div>
+        </a>
+        <!--菜单组-->
+        <ul class="menu-container">
+            <li class="menu">
+                <a href="coupon-list.html">
+                    <span class="menu-icon menu-icon-coupon">
+                        <span class="hot-dot"></span>
+                    </span>
+                    <div class="menu-text-container">
+                        <p class="menu-text">优惠券</p>
+                        <span class="arrow-right"></span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu">
+                <a href="address-select.html">
+                    <span class="menu-icon menu-icon-address"></span>
+                    <div class="menu-text-container">
+                        <p class="menu-text">地址管理</p>
+                        <span class="arrow-right"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-container">
+            <li class="menu">
+                <a href="service.html">
+                    <span class="menu-icon menu-icon-connect"></span>
+                    <div class="menu-text-container">
+                        <p class="menu-text">联系客服</p>
+                        <span class="arrow-right"></span>
+                        <!--<span class="tel">400-616-1111</span>-->
+                    </div>
+                </a>
+            </li>
+            <li class="menu">
+                <a href="about.html">
+                    <span class="menu-icon menu-icon-about"></span>
+                    <div class="menu-text-container">
+                        <p class="menu-text">关于趣秀</p>
+                        <span class="arrow-right"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-container">
+            <li class="menu">
+                <a href="setting.html">
+                    <span class="menu-icon menu-icon-setting"></span>
+                    <div class="menu-text-container">
+                        <p class="menu-text">设置</p>
+                        <span class="arrow-right"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,lib/lib-httpurl/httpurl.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js"></script>
+<script src="assets/h5/my.js"></script>
+</body>
+</html>

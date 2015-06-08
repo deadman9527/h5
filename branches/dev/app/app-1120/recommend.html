@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="../../assets/app-1120/recommend.css?v=2" rel="stylesheet" type="text/css" />
+    <link href="http://h5.quxiu.me/assets/ctrl/ctrl-nav/nav.css" rel="stylesheet" type="text/css" />
+    <title>猜你喜欢</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="main-hd j-trigger">
+        <div class="avatar"></div>
+        <div class="j-tip tip"></div>
+        <div class="action"></div>
+    </div>
+    <div class="main-bd" id="items"></div>
+</div>
+
+<div id="dialog" class="dialog-box-outer"></div>
+
+<script type="text/template" id="tpl-dialog">
+    <div class="dialog-box">
+        <div class="hd">添加宝宝档案<br>打造专属优品</div>
+        <div class="bd">
+            <div class="form-item">
+                <span class="label">小名</span> <span class="split">|</span>
+                <div class="input-wrapper">
+                    <input id="nickname" type="text" placeholder="选填" value="<%= name %>"/>
+                </div>
+            </div>
+            <div class="form-item">
+                <span class="label">性别</span> <span class="split">|</span>
+                <div class="radiobox">
+                    <span class="j-radiobox" data-gender="boy">
+                        <span class="radio-icon boy <%= (gender=='boy') && 'active' %>"></span>男宝
+                    </span>
+                    <span class="j-radiobox" data-gender="girl">
+                        <span class="radio-icon girl <%= (gender=='girl') && 'active' %>"></span>女宝
+                    </span>
+                </div>
+            </div>
+            <div class="form-item">
+                <span class="label">生日/预产期</span> <span class="split">|</span>
+                <div class="input-wrapper">
+                    <div class="j-select input-box placeholder">点击输入</div>
+                </div>
+                <input id="birthday" type="hidden"/>
+            </div>
+        </div>
+        <div class="ft">
+            <a class="j-cancel btn" href="javascript:void(0)">下次再填</a>
+            <a class="j-confirm btn" href="javascrpt:void(0)">确定</a>
+        </div>
+    </div>
+</script>
+<style>
+.main-bd .type-1,
+.main-bd .type-2,
+.main-bd .type-3,
+.main-bd .type-4{
+	background: #eee;
+}
+.item-list {
+padding-top: 10px;
+margin-top:0;
+}
+</style>
+<script type="text/template" id="tpl-item">
+    <% _.each(data, function (sec, index) { %>
+    <div class="sec-box type-<%=index+1%>">
+        <div class="item-list clearfix">
+            <% _.each(sec.list, function (item,i) {  %>
+            <% if(i%2==0){%><div class="list-item clearleft"><%}else{%><div class="list-item"><%}%>
+            <a class="action" href="http://h5.quxiu.me/detail.html?productId=<%= item.productid %>">
+                <div class="item-main">
+                    <div class="lazy img" dataimg="<%= item.imageUrl %>"></div>
+                    <div class="profile">
+                        <div class="item-name single-line"><%= item.name %></div>
+                        <div class="price">
+                            <span class="price-new"><span>&yen;</span><%= item.current_price %></span>
+                            <span class="price-old"><del><span>&yen;</span><%= item.origin_price %></del></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tag"><%= Number(item.current_price/item.origin_price*10).toFixed(1) %>折</div>
+            </a>
+        </div>
+            <% }); %>
+        </div>
+        </div>
+        <% }); %>
+</script>
+
+<script src="http://h5.quxiu.me/min/?f=assets/3rd/zepto.min.js,assets/lib/lib-env/env.js,assets/lib/lib-httpurl/httpurl.js"></script>
+
+<script src="../../assets/app-1120/recommend.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js,lib/lib-callapp/callapp.js"></script>
+<script>
+    new ctrl.topBar({
+        isIndex: false
+    });
+new ctrl.bottomBar({
+	showCircle:true,
+	showApp:true
+});
+$('#callApp').on('click', function(e) {
+	var schema = location.href,
+		params = true,
+		point = true;
+	lib.callapp.gotoPage(schema, {point: point, params: params});
+});
+</script>
+<script src="http://h5.quxiu.me/assets/js/piwik.min.js"></script> 
+
+</body></html>

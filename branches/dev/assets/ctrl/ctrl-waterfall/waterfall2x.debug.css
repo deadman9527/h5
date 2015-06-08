@@ -1,0 +1,21 @@
+div[data-ctrl-name="waterfall"] {
+  width: 100%;
+}
+div[data-ctrl-name="waterfall"] .column-wrap {
+  width: 100%;
+  display: -webkit-box;
+}
+div[data-ctrl-name="waterfall"] .column-wrap .column:last-child {
+  margin-right: 0!important;
+}
+div[data-ctrl-name="waterfall"] .column-wrap .column {
+  position: relative;
+}
+div[data-ctrl-name="waterfall"] .column-wrap .column .item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+div[data-ctrl-name="waterfall"][data-prop-mode="column"] .column {
+  -webkit-box-flex: 1;
+}

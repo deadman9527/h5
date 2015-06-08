@@ -1,0 +1,12 @@
+body{background-color:#eee;color:#333;-webkit-text-size-adjust:100%;}
+a{color:#333;}
+.wrap{min-width:320px;margin:0 auto;position:relative;}
+.clearfix:after{display: block; content: '';clear: both;visibility: hidden;}
+.none{display:none!important;}
+.gap{padding:0 10px;}
+.omit{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.orange{color:#ff5000;}
+.green{color:#008c46;}
+.red{color:#d40000;}
+.gray{color:#666;}
+.lgray{color:#999;}

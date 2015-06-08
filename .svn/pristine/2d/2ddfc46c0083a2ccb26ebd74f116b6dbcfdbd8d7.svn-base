@@ -1,0 +1,2 @@
+document.write('<scr' + 'ipt id="combo_url_1383551733607" type="text/javascript" src="http://g.assets.daily.taobao.net/mtb/??zepto/1.0.4/zepto.debug.js,lib-aplus/1.1.0/aplus.debug.js"></scr' + 'ipt>')
+document.write('<scr' + 'ipt id="combo_url_main" type="text/javascript" src="build/share.debug.js"></scr' + 'ipt>')

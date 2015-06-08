@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/order-list.css?t=20141229" rel="stylesheet" type="text/css" />
+    <title>我的</title>
+    <script>
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                location.reload();
+            }
+        })
+    </script>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+<div class="container">
+    <div class="main">
+        <!--订单菜单部分-->
+        <div class="order-tab-container">
+            <ul>
+                <li class="order-status">
+                    <p>全部</p>
+                </li>
+                <li class="order-status">
+                    <p>待支付</p>
+                </li>
+                <li class="order-status">
+                    <p>待收货</p>
+                </li>
+                <li class="order-status">
+                    <p>已完成</p>
+                </li>
+            </ul>
+        </div>
+        <!--订单容器-->
+        <div id="orders">
+
+
+
+        </div>
+
+
+    </div>
+</div>
+<div class="info-tip"></div>
+
+
+<script type="text/template" id="tpl-item">
+    <% _.each(itemList, function (item, index) { %>
+    <!--订单-->
+    <div class="order-container">
+        <div class="detail-link" data-id="<%= item.order_sn %>">
+            <!--订单编号-->
+            <div class="order-no">
+                <span class="no-text">订单编号:<%= item.order_sn %></span>
+                <span class="no-status"><%= item.order_status %></span>
+            </div>
+            <!--商品列表-->
+            <div class="goods-container">
+                <% if(item.order_status=='待支付'){ %>
+                <div class="order-discount">
+                    <img src="http://img01.ve.cn/party/27122cd1ceba4aaa7b8144ad0722836c.png" alt="" width="13"/>
+                    <p>还剩 <span data="<%= item.pay_end_second %>"></span> 订单将关闭</p>
+                </div>
+                <% }; %>
+                <ul>
+                    <% _.each(item.product, function (product, i) { %>
+                    <li class="<%= i>0?'hidden':'' %>">
+                        <img class="lazy img" src="http://h5.quxiu.me/assets/img/blank.png" dataimg="<%= Global.formatImgSrc(product.image.replace('http://api.local.ve.cn','http://img.ve.cn')) %>"  width="57" height="57" alt=""/>
+                        <div class="good-information">
+                            <p class="good-name"><%= product.name %></p>
+                            <p class="good-number"><span class="icon-x"></span><span><%= product.number %></span></p>
+                            <p class="good-type"><%= product.attr_name %></p>
+                        </div>
+                        <span class="good-price">￥<%= parseFloat(product.unit_price).toFixed(2) %></span>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+        <!--显示或隐藏多件商品-->
+        <% if(item.product.length>1){ %>
+        <div class="goods-ctr show">查看全部<%= item.product.length %>件商品</div>
+        <div class="goods-ctr hide hidden">隐藏部分商品</div>
+        <% }; %>
+        <!--商品总价-->
+        <div class="goods-sum">
+            <span class="sum-text">应付:￥<%= parseFloat(item.total_price).toFixed(2) %></span>
+            <% if(item.order_status=='待支付'){ %>
+            <div class="btn btn-active pay">立即支付</div>
+            <% }; %>
+
+            <% if(item.order_status=='待发货'||item.order_status=='已发货'||item.order_status=='已完成'){ %>
+            <div class="btn btn-active logistic">查看物流</div>
+            <% }; %>
+
+        </div>
+    </div>
+
+    <% }); %>
+</script>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-infinitescroll/infinitescroll.js,lib/lib-notification/notification.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js&20150305"></script>
+<script src="assets/h5/order-list.js?t=20150305"></script>
+</body>
+</html>

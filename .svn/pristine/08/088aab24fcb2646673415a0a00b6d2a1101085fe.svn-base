@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>下载唯一优品客户端</title>
+    <style>
+        body{background: #fffdec;}
+        *{padding: 0;margin: 0;}
+        .main>img ,.first>img{width: 100%;}
+        .first{position: relative;}
+        .btns a{margin-left: 11.875%;margin-right: 11.875%;width: 76.25%;border-radius: 10px;border: none;height: 0; padding-bottom: 17.1875%;border-radius: 10px;}
+        .btns a img{width: 100%;}
+        .btn{position: absolute;text-align: center;top: 37%;}
+    </style>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+<div class="main">
+    <div class="first">
+        <img src="http://img01.ve.cn/party/default/6e6f0b59981ed5bd6d9cd9c0fea9e20a.jpg" alt=""/>
+        <div class="btns">
+            <a href="javascript:;" class="btn"></a>
+        </div>
+    </div>
+    <img src="http://img01.ve.cn/party/default/a8fe83191a3ff1558d51de6ae42cc5f4.jpg" alt=""/>
+    <img src="http://img01.ve.cn/party/default/9c993b406816fba4a76b0f593ee954f1.jpg" alt=""/>
+    <img src="http://img01.ve.cn/party/default/a219df85e82c0c8dfafc9318c6857177.jpg" alt=""/>
+</div>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-httpurl/httpurl.js,lib/lib-env/env.js,lib/lib-callapp/callapp.js,ctrl/ctrl-bottombar/bottombar.js"></script>
+<script>
+    $(function(){
+        $(".btn").on("click",function(){
+            var schema = "http://h5.quxiu.me/index.html";
+            schema = schema.replace(/test.h5/g, "h5");//线上不需要
+            var params = true;
+            var point = true;
+            lib.callapp.gotoPage(schema, {point: point, params: params});
+        });
+    });
+</script>
+</body>
+</html>

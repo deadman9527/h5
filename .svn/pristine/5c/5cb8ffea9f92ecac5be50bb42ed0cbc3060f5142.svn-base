@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <meta property="qc:admins" content="341267604765636" />
+    <link href="assets/h5/agefilter.css?t=20150116" rel="stylesheet" type="text/css" />
+    <title>唯一优品</title>
+    <style>
+    </style>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+
+<div class="agefilter">
+    <!--<h1>我的定制<a href="javascript:;" filter="0" name="全部"><span class="float-right all">全部</span></a></h1>-->
+    <div class="agefilter-main">
+        <a href="javascript:;" filter="1" name="婴幼儿"> <div class="agefilter-item-list-top">
+            <div class="lazy" dataimg="http://img01.ve.cn/party/ef9f0ac8094af3fe6374f87bc0072d94.jpg"></div>
+            <!--<img class="lazy" dataimg="http://img01.ve.cn/party/ef9f0ac8094af3fe6374f87bc0072d94.jpg" src="http://h5.quxiu.me/assets/img/empty.png" />-->
+            <p>婴幼儿<span class="age-small">（0-3岁）</span></p>
+        </div></a>
+
+        <div class="agefilter-out-item">
+            <a href="javascript:;" filter="3" name="小童"><div class="agefilter-item-list">
+                <div class="lazy" dataimg="http://img01.ve.cn/party/dccc8c69bfb7a1e6937cd8fa003915d8.jpg"></div>
+                <!--<img class="lazy" dataimg="http://img01.ve.cn/party/dccc8c69bfb7a1e6937cd8fa003915d8.jpg" src="http://h5.quxiu.me/assets/img/empty.png" />-->
+                <p>小童<br /><span class="age-small">3-6岁</span></p>
+            </div></a>
+            <a href="javascript:;" filter="4" name="男童"><div class="agefilter-item-list">
+                <div class="lazy" dataimg="http://img01.ve.cn/party/373ac8c6ca04e247de95d4a47be96210.jpg"></div>
+                <!--<img class="lazy" dataimg="http://img01.ve.cn/party/373ac8c6ca04e247de95d4a47be96210.jpg" src="http://h5.quxiu.me/assets/img/empty.png" />-->
+                <p>男童<br /><span class="age-small">6岁以上</span></p>
+            </div></a>
+        </div>
+        <div class="agefilter-out-item">
+            <a href="javascript:;" filter="5" name="女童"><div class="agefilter-item-list">
+                <div class="lazy" dataimg="http://img01.ve.cn/party/aaf52f6063cee296064e1f64c017b67e.jpg"></div>
+                <!--<img class="lazy" dataimg="http://img01.ve.cn/party/aaf52f6063cee296064e1f64c017b67e.jpg" src="http://h5.quxiu.me/assets/img/empty.png" />-->
+                <p>女童<br /><span class="age-small">6岁以上</span></p>
+            </div></a>
+            <a href="javascript:;" filter="2" name="孕妈"><div class="agefilter-item-list">
+                <div class="lazy" dataimg="http://img01.ve.cn/party/b53f3a0b4d8382a934d9b05655c78287.jpg"></div>
+                <!--<img class="lazy" dataimg="http://img01.ve.cn/party/b53f3a0b4d8382a934d9b05655c78287.jpg" src="http://h5.quxiu.me/assets/img/empty.png" />-->
+                <p>孕妈<br /><span class="age-small">&nbsp;</span></p>
+            </div></a>
+        </div>
+    </div>
+</div>
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://test.h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-lazyload/lazyload.js,lib/lib-infinitescroll/infinitescroll.js,lib/lib-httpurl/httpurl.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,lib/lib-slider/slider.js,lib/lib-env/env.js,lib/lib-callapp/callapp.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js,lib/lib-scroll/combo.js,lib/lib-scroll/scroll.js,ctrl/ctrl-selectmenu/selectmenu.js"></script>
+<script src="assets/h5/agefilter.js?t=20150115"></script>
+</body>
+</html>

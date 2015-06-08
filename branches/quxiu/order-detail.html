@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="唯一特卖,唯一母婴,ve"/>
+    <meta name="description" content="唯一优品(ve.cn),专注母婴名品折扣特卖,ve唯一母婴特卖网站低价确保正品，支持货到付款，找特卖，来ve优品！"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <link href="assets/h5/order-detail.css?t=20150118" rel="stylesheet" type="text/css" />
+    <title>我的</title>
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?6cd8a09ebfe4dfbfa5a405e22d5841a5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script></head>
+<body>
+<div class="container">
+    <div class="main">
+        <!--地址栏-->
+        <div id="address">
+        </div>
+        <!--商品列表-->
+        <div id="orders">
+            <!--商品详情-->
+            <div class="goods-detail">
+                <span class="detail-text">商品信息:</span>
+            </div>
+            <ul class="goods-container">
+            </ul>
+            <!--商品总价-->
+            <div class="goods-sum">
+            </div>
+        </div>
+        <!--订单信息-->
+        <div class="order-information">
+            <div class="information-title">
+                <span class="title-text">订单信息:</span>
+            </div>
+            <div class="information-content">
+            </div>
+        </div>
+        <div class="pro-call">
+            <span class="tel-phone">客服电话：400-616-1111 </span><a href="tel:4006161111" class="righta"><span class="callright">立即拨打</span></a>
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-address">
+    <!--地址栏-->
+    <% if(order.order_status == '待支付'){ %>
+    <div class="order-discount">
+        <img src="http://img01.ve.cn/party/27122cd1ceba4aaa7b8144ad0722836c.png" alt="" width="13"/>
+        <p>库存紧张，请尽快完成支付，<span data="<%= order.pay_end_second %>"></span>后订单将关闭！</p>
+    </div>
+    <% }; %>
+    <a  class="address-container">
+        <p class="person-information"><span class="name"><%= order.name %> </span><span class="tel"><%= order.mobile %></span></p>
+        <p class="address"><span><%= (order.province_name||'') + (order.city_name||'') + (order.qu_name||'') + (order.town_name||'') %></span><br>
+           <span class="address-content"><%= order.address %></span>
+        </p>
+    </a>
+</script>
+<script type="text/template" id="tpl-goods">
+    <% _.each(order.product, function (product, i) { %>
+    <li>
+        <a href="detail.html?productId=<%= product.productid %>">
+            <img  class="lazy img" src="http://h5.quxiu.me/assets/img/blank.png" dataimg="<%= Global.formatImgSrc(product.image.replace('http://api.local.ve.cn','http://img.ve.cn')) %>" width="57" height="57" alt=""/>
+            <div class="good-information">
+                <p class="good-name"><%= product.name %></p>
+                <p class="good-number"><span class="icon-x"></span><span><%= product.number %></span></p>
+                <p class="good-type"><%= product.attr_name %></p>
+            </div>
+            <p class="good-price">￥<%= parseFloat(product.unit_price).toFixed(2) %></p>
+        </a>
+    </li>
+    <% }); %>
+</script>
+<script type="text/template" id="tpl-sum">
+    <div class="row">
+        <span class="sum-text">运费:</span>
+        <span class="sum-price">￥<%= parseFloat(order.delivery_fee).toFixed(2) %></span>
+    </div>
+    <div class="row">
+        <span class="sum-text">活动优惠:</span>
+        <span class="sum-price">￥-<%= parseFloat(order.sum_discount).toFixed(2) %></span>
+    </div>
+    <div class="row">
+        <span class="sum-text">实付款（含运费）:</span>
+        <span class="sum-price red">￥<%= parseFloat(order.new_total_price).toFixed(2) %></span>
+    </div>
+</script>
+<script type="text/template" id="tpl-order-info">
+    <div class="row">
+        <span class="title">订单编号:</span>
+        <span class="content"><%= order.order_sn %></span>
+    </div>
+    <div class="row">
+        <span class="title">订单时间:</span>
+        <span class="content"><%= Global.timeFormat(order.create_time) %></span>
+    </div>
+    <div class="row">
+        <span class="title">订单状态:</span>
+        <span class="content red"><%= order.order_status %></span>
+    </div>
+
+</script>
+<script type="text/template" id="tpl-action">
+    <div class="action-container">
+        <% if(order.order_status == '待发货'|| order.order_status == '已发货'||order.order_status == '已完成'){ %>
+        <div class="btn btn-active logistic">查看物流</div>
+        <% } %>
+        <!--<% if(order.order_status == '已发货'){ %>-->
+        <!--<% if(order.retake_status){ %>-->
+        <!--<div class="btn btn-active track">追踪退货</div>-->
+        <!--<% }else{ %>-->
+        <!--<div class="btn btn-default apply">申请退货</div>-->
+        <!--<% } %>-->
+        <!--<% } %>-->
+        <!--<% if(order.order_status == '无效单'){ %>-->
+        <!--<div class="btn btn-default delete">删除订单</div>-->
+        <!--<% } %>-->
+        <% if(order.order_status == '待支付'){ %>
+        <div class="btn btn-active pay">立即支付</div>
+        <div class="btn btn-default cancel">取消订单</div>
+        <% } %>
+    </div>
+</script>
+
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-storage/storage.js,lib/lib-login/login.js,3rd/underscore-min.js,lib/lib-notification/notification.js,lib/lib-httpurl/httpurl.js,lib/lib-lazyload/lazyload.js,lib/lib-api/api.js,lib/lib-gotop/gotop.js,ctrl/ctrl-topbar/topbar.js,ctrl/ctrl-bottombar/bottombar.js&20150305"></script>
+<script src="assets/h5/order-detail.js?t=20150305"></script>
+
+</body>
+</html>

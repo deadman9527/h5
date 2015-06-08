@@ -1,0 +1,24 @@
+{
+  "name": "lib.aplus",
+  "description": "aplus",
+  "version": "1.3.6",
+  "license": "MIT",
+  "author": "zhuxun <zhuxun.jb@taobao.com>",
+  "homepage": "http://gitlab.alibaba-inc.com/mtb/lib-aplus",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:mtb/lib-aplus.git"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-depconcat": "~0.2.0",
+    "grunt-depcombo": "~0.1.0"
+  },
+  "combo": {},
+  "keywords": [
+    "aplus",
+    "lib"
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><script>document.write('<base href="' + location.protocol + '//' + location.host + '">');</script>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="趣秀"/>
+    <meta name="description" content="趣秀(quxiu.me)"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>优品牌</title>
+    <link href="assets/h5/youpingpai.css?t=20141231" rel="stylesheet" type="text/css" />
+<body>
+
+
+<script src="http://h5.quxiu.me/assets/js/3rd/zepto.min.js"></script>
+<script src="http://h5.quxiu.me/min/?b=assets&f=lib/lib-h5log/h5log.js,lib/lib-env/env.js,lib/lib-notification/notification.js"></script>
+<script>
+    ;(function ($) {
+        var main = {
+            init: function () {
+                if(lib.env.os.isAndroid && lib.env.app.isVecn && lib.env.app.version.lt(1.61)){
+                    var pop = lib.notification.msg("请升级至最新版本客户端");
+                    pop.show();
+                }else{
+                    window.location.replace( "http://act.quxiu.me/m/nicebrand.html");
+                }
+            }
+        };
+        // run
+        $(function () {
+            main.init();
+        })
+    })(Zepto, window.Global || (window.Global = {}));
+</script>
+
+</body>
+</html>
